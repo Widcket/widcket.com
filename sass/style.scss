@@ -25,28 +25,28 @@ a, a:link, a:visited, a:hover, a:active {
         #presentation {
             #greeting {
                 font-family: $secondaryFont;
-                font-size: calc(7vmin / #{$headerScale}); // TODO: Set a minimum fixed size for mobile
+                font-size: 5.833vmin; // TODO: Set a minimum fixed size for mobile
             }
 
             #name {
                 @include mainFontExtraBold;
 
-                font-size: calc(25vmin / #{$headerScale}); // TODO: Set a minimum fixed size for mobile
+                font-size: 20.833vmin; // TODO: Set a minimum fixed size for mobile
             }
         }
 
         #tagline {
             @include mainFontLight;
 
-            font-size: calc(4vmin / #{$headerScale}); // TODO: Set a minimum fixed size for mobile
-            letter-spacing: calc(0.1vmin / #{$headerScale});
+            font-size: 3.333vmin; // TODO: Set a minimum fixed size for mobile
+            letter-spacing: 0.083vmin;
             text-transform: uppercase;
         }
 
         #profiles a {
             @include mainFontMedium;
 
-            font-size: calc(2.5vmin / #{$headerScale});
+            font-size: 2.083vmin;
             text-transform: lowercase;
         }
     }
@@ -70,27 +70,27 @@ a, a:link, a:visited, a:hover, a:active {
         @include centerChildren;
 
         position: relative;
-        min-width: calc(63vmin / #{$headerScale});
+        min-width: 52.5vmin;
 
         #presentation {
-            top: calc(-6.5vmin / #{$headerScale}); // Substract the top offsets of the relative positioned children to avoid pushing everything down
+            top: -5.417vmin; // Substract the top offsets of the relative positioned children to avoid pushing everything down
 
             #greeting {
                 position: relative;
-                top: calc(6.5vmin / #{$headerScale});
-                left: calc(-4.5vmin / #{$headerScale});
+                top: 5.417vmin;
+                left: -3.75vmin;
             }
         }
 
         #tagline {
-            margin-top: calc(2vmin / #{$headerScale});
+            margin-top: 1.667vmin;
         }
 
         #profiles a {
             display: inline-block;
-            margin-top: calc(7vmin / #{$headerScale});
-            margin-left: calc(1.5vmin / #{$headerScale});
-            padding: calc(1.5vmin / #{$headerScale}) calc(4.5vmin / #{$headerScale});
+            margin-top: 5.833vmin;
+            margin-left: 1.25vmin;
+            padding: 1.25vmin 3.75vmin;
         }
     }
 
@@ -115,7 +115,7 @@ a, a:link, a:visited, a:hover, a:active {
     header {
         #profiles a {
             border: 1px solid $secondaryColor;
-            border-radius: calc(10vmin / #{$headerScale});
+            border-radius: 8.333vmin;
         }
     }
 }

@@ -346,24 +346,24 @@ a, a:link, a:visited, a:hover, a:active {
 
 #left header #presentation #greeting {
   font-family: "Nothing You Could Do", Georgia, Times, serif;
-  font-size: calc(7vmin / 1.2); }
+  font-size: 5.833vmin; }
 
 #left header #presentation #name {
   font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: 800;
-  font-size: calc(25vmin / 1.2); }
+  font-size: 20.833vmin; }
 
 #left header #tagline {
   font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: 400;
-  font-size: calc(4vmin / 1.2);
-  letter-spacing: calc(0.1vmin / 1.2);
+  font-size: 3.333vmin;
+  letter-spacing: 0.083vmin;
   text-transform: uppercase; }
 
 #left header #profiles a {
   font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: 400;
-  font-size: calc(2.5vmin / 1.2);
+  font-size: 2.083vmin;
   text-transform: lowercase; }
 
 #grid {
@@ -381,20 +381,20 @@ a, a:link, a:visited, a:hover, a:active {
   justify-content: center;
   align-items: center;
   position: relative;
-  min-width: calc(63vmin / 1.2); }
+  min-width: 52.5vmin; }
   #left header #presentation {
-    top: calc(-6.5vmin / 1.2); }
+    top: -5.417vmin; }
     #left header #presentation #greeting {
       position: relative;
-      top: calc(6.5vmin / 1.2);
-      left: calc(-4.5vmin / 1.2); }
+      top: 5.417vmin;
+      left: -3.75vmin; }
   #left header #tagline {
-    margin-top: calc(2vmin / 1.2); }
+    margin-top: 1.667vmin; }
   #left header #profiles a {
     display: inline-block;
-    margin-top: calc(7vmin / 1.2);
-    margin-left: calc(1.5vmin / 1.2);
-    padding: calc(1.5vmin / 1.2) calc(4.5vmin / 1.2); }
+    margin-top: 5.833vmin;
+    margin-left: 1.25vmin;
+    padding: 1.25vmin 3.75vmin; }
 
 #left header, #left aside {
   overflow: hidden;
@@ -409,4 +409,4 @@ a, a:link, a:visited, a:hover, a:active {
 
 #left header #profiles a {
   border: 1px solid black;
-  border-radius: calc(10vmin / 1.2); }
+  border-radius: 8.333vmin; }

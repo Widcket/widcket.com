@@ -13,7 +13,7 @@ a, a:link, a:visited, a:hover, a:active {
 #grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 2rem;
+    grid-gap: 1.5rem;
     grid-auto-flow: row; // TODO: Change this to column for mobile
     justify-items: stretch;
 }
@@ -25,28 +25,28 @@ a, a:link, a:visited, a:hover, a:active {
         #presentation {
             #greeting {
                 font-family: $secondaryFont;
-                font-size: 7vmin; // TODO: Set a minimum fixed size for mobile
+                font-size: calc(7vmin / #{$headerScale}); // TODO: Set a minimum fixed size for mobile
             }
 
             #name {
                 @include mainFontExtraBold;
 
-                font-size: 25vmin; // TODO: Set a minimum fixed size for mobile
+                font-size: calc(25vmin / #{$headerScale}); // TODO: Set a minimum fixed size for mobile
             }
         }
 
         #tagline {
             @include mainFontLight;
 
-            font-size: 4vmin; // TODO: Set a minimum fixed size for mobile
-            letter-spacing: 0.1vmin;
+            font-size: calc(4vmin / #{$headerScale}); // TODO: Set a minimum fixed size for mobile
+            letter-spacing: calc(0.1vmin / #{$headerScale});
             text-transform: uppercase;
         }
 
         #profiles a {
             @include mainFontMedium;
 
-            font-size: 2.5vmin;
+            font-size: calc(2.5vmin / #{$headerScale});
             text-transform: lowercase;
         }
     }
@@ -70,25 +70,27 @@ a, a:link, a:visited, a:hover, a:active {
         @include centerChildren;
 
         position: relative;
-        top: -6.5vmin; // Substract the top offsets of the relative positioned children to avoid pushing everything down
+        min-width: calc(63vmin / #{$headerScale});
 
         #presentation {
+            top: calc(-6.5vmin / #{$headerScale}); // Substract the top offsets of the relative positioned children to avoid pushing everything down
+
             #greeting {
                 position: relative;
-                top: 6.5vmin;
-                left: -4.5vmin;
+                top: calc(6.5vmin / #{$headerScale});
+                left: calc(-4.5vmin / #{$headerScale});
             }
         }
 
         #tagline {
-            margin-top: 2vmin;
+            margin-top: calc(2vmin / #{$headerScale});
         }
 
         #profiles a {
             display: inline-block;
-            margin-top: 7vmin;
-            margin-left: 1.5vmin;
-            padding: 1.5vmin 4.5vmin;
+            margin-top: calc(7vmin / #{$headerScale});
+            margin-left: calc(1.5vmin / #{$headerScale});
+            padding: calc(1.5vmin / #{$headerScale}) calc(4.5vmin / #{$headerScale});
         }
     }
 
@@ -113,7 +115,7 @@ a, a:link, a:visited, a:hover, a:active {
     header {
         #profiles a {
             border: 1px solid $secondaryColor;
-            border-radius: 10vmin;
+            border-radius: calc(10vmin / #{$headerScale});
         }
     }
 }

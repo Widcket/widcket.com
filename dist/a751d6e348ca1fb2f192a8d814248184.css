@@ -340,30 +340,30 @@ a, a:link, a:visited, a:hover, a:active {
 #grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem;
+  grid-gap: 1.5rem;
   grid-auto-flow: row;
   justify-items: stretch; }
 
 #left header #presentation #greeting {
   font-family: "Nothing You Could Do", Georgia, Times, serif;
-  font-size: 7vmin; }
+  font-size: calc(7vmin / 1.2); }
 
 #left header #presentation #name {
   font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: 800;
-  font-size: 25vmin; }
+  font-size: calc(25vmin / 1.2); }
 
 #left header #tagline {
   font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: 400;
-  font-size: 4vmin;
-  letter-spacing: 0.1vmin;
+  font-size: calc(4vmin / 1.2);
+  letter-spacing: calc(0.1vmin / 1.2);
   text-transform: uppercase; }
 
 #left header #profiles a {
   font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: 400;
-  font-size: 2.5vmin;
+  font-size: calc(2.5vmin / 1.2);
   text-transform: lowercase; }
 
 #grid {
@@ -381,18 +381,20 @@ a, a:link, a:visited, a:hover, a:active {
   justify-content: center;
   align-items: center;
   position: relative;
-  top: -6.5vmin; }
-  #left header #presentation #greeting {
-    position: relative;
-    top: 6.5vmin;
-    left: -4.5vmin; }
+  min-width: calc(63vmin / 1.2); }
+  #left header #presentation {
+    top: calc(-6.5vmin / 1.2); }
+    #left header #presentation #greeting {
+      position: relative;
+      top: calc(6.5vmin / 1.2);
+      left: calc(-4.5vmin / 1.2); }
   #left header #tagline {
-    margin-top: 2vmin; }
+    margin-top: calc(2vmin / 1.2); }
   #left header #profiles a {
     display: inline-block;
-    margin-top: 7vmin;
-    margin-left: 1.5vmin;
-    padding: 1.5vmin 4.5vmin; }
+    margin-top: calc(7vmin / 1.2);
+    margin-left: calc(1.5vmin / 1.2);
+    padding: calc(1.5vmin / 1.2) calc(4.5vmin / 1.2); }
 
 #left header, #left aside {
   overflow: hidden;
@@ -407,4 +409,4 @@ a, a:link, a:visited, a:hover, a:active {
 
 #left header #profiles a {
   border: 1px solid black;
-  border-radius: 10vmin; }
+  border-radius: calc(10vmin / 1.2); }

@@ -9,6 +9,7 @@ $fullHeight: 100vh;
 #grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
     grid-auto-flow: row; // Change this to column for mobile
     justify-items: stretch;
 }
@@ -17,19 +18,19 @@ $fullHeight: 100vh;
 
 #greeting {
     font-family: $secondaryFont;
-    font-size: 3rem;
+    font-size: 7vh; // Set a minimum fixed size for mobile
 }
 
 #name {
     font-family: $mainFont;
     font-weight: 800;
-    font-size: 10rem;
+    font-size: 25vh; // Set a minimum fixed size for mobile
 }
 
 #tagline {
     font-family: $mainFont;
     font-weight: 300;
-    font-size: 1.5rem;
+    font-size: 4vh; // Set a minimum fixed size for mobile
     text-transform: uppercase;
 }
 
@@ -43,9 +44,11 @@ $fullHeight: 100vh;
 
 #left, #right {
     overflow-y: scroll;
+    height: $fullHeight;
 }
 
-#left, #left header, #right, .project {
+#left header, #left aside, #right .project {
+    overflow: hidden;
     height: $fullHeight;
 }
 

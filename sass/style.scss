@@ -1,0 +1,16 @@
+#grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#left {
+    grid-column: 1 / 2;
+}
+
+#right {
+    grid-column: 2 / 2;
+}
+
+#tagline, .aside-title, .aside-subtitle, .project-title {
+    display: block;
+}

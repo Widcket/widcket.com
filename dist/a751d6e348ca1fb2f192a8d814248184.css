@@ -333,6 +333,10 @@ video {
   color: #000;
   text-shadow: none;
 }
+a, a:link, a:visited, a:hover, a:active {
+  color: black;
+  text-decoration: none; }
+
 #grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -340,20 +344,27 @@ video {
   grid-auto-flow: row;
   justify-items: stretch; }
 
-#greeting {
+#left header #presentation #greeting {
   font-family: "Nothing You Could Do", Georgia, Times, serif;
-  font-size: 7vh; }
+  font-size: 7vmin; }
 
-#name {
+#left header #presentation #name {
   font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: 800;
-  font-size: 25vh; }
+  font-size: 25vmin; }
 
-#tagline {
+#left header #tagline {
   font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-weight: 300;
-  font-size: 4vh;
+  font-weight: 400;
+  font-size: 4vmin;
+  letter-spacing: 0.1vmin;
   text-transform: uppercase; }
+
+#left header #profiles a {
+  font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 2.5vmin;
+  text-transform: lowercase; }
 
 #grid {
   max-height: 100vh;
@@ -361,12 +372,39 @@ video {
   overflow: hidden; }
 
 #left, #right {
-  overflow-y: scroll;
+  height: 100vh;
+  overflow-y: scroll; }
+
+#left header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -6.5vmin; }
+  #left header #presentation #greeting {
+    position: relative;
+    top: 6.5vmin;
+    left: -4.5vmin; }
+  #left header #tagline {
+    margin-top: 2vmin; }
+  #left header #profiles a {
+    display: inline-block;
+    margin-top: 7vmin;
+    margin-left: 1.5vmin;
+    padding: 1.5vmin 4.5vmin; }
+
+#left header, #left aside {
+  overflow: hidden;
   height: 100vh; }
 
-#left header, #left aside, #right .project {
+#right .project {
   overflow: hidden;
   height: 100vh; }
 
 #tagline, .aside-title, .aside-subtitle, .project-title {
   display: block; }
+
+#left header #profiles a {
+  border: 1px solid black;
+  border-radius: 10vmin; }

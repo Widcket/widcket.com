@@ -2,7 +2,43 @@
 
 $mainFont: 'Montserrat', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 $secondaryFont: 'Nothing You Could Do', Georgia, Times, serif;
-$fullHeight: 100vh;
+$secondaryColor: black; // Temporary
+
+// Mixins
+
+@mixin coverHeight {
+    overflow: hidden;
+    height: 100vh;
+}
+
+@mixin centerChildren {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin mainFontLight {
+    font-family: $mainFont;
+    font-weight: 400;
+}
+
+@mixin mainFontMedium {
+    font-family: $mainFont;
+    font-weight: 400;
+}
+
+@mixin mainFontExtraBold {
+    font-family: $mainFont;
+    font-weight: 800;
+}
+
+// Custom resets
+
+a, a:link, a:visited, a:hover, a:active {
+    color: $secondaryColor;
+    text-decoration: none;
+}
 
 // Grid
 
@@ -10,48 +46,106 @@ $fullHeight: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
-    grid-auto-flow: row; // Change this to column for mobile
+    grid-auto-flow: row; // TODO: Change this to column for mobile
     justify-items: stretch;
 }
 
 // Fonts
 
-#greeting {
-    font-family: $secondaryFont;
-    font-size: 7vh; // Set a minimum fixed size for mobile
-}
+#left {
+    header {
+        #presentation {
+            #greeting {
+                font-family: $secondaryFont;
+                font-size: 7vmin; // TODO: Set a minimum fixed size for mobile
+            }
 
-#name {
-    font-family: $mainFont;
-    font-weight: 800;
-    font-size: 25vh; // Set a minimum fixed size for mobile
-}
+            #name {
+                @include mainFontExtraBold;
 
-#tagline {
-    font-family: $mainFont;
-    font-weight: 300;
-    font-size: 4vh; // Set a minimum fixed size for mobile
-    text-transform: uppercase;
+                font-size: 25vmin; // TODO: Set a minimum fixed size for mobile
+            }
+        }
+
+        #tagline {
+            @include mainFontLight;
+
+            font-size: 4vmin; // TODO: Set a minimum fixed size for mobile
+            letter-spacing: 0.1vmin;
+            text-transform: uppercase;
+        }
+
+        #profiles a {
+            @include mainFontMedium;
+
+            font-size: 2.5vmin;
+            text-transform: lowercase;
+        }
+    }
 }
 
 // Display & positioning
 
 #grid {
-    max-height: $fullHeight;
+    max-height: 100vh;
     position: fixed;
     overflow: hidden;
 }
 
 #left, #right {
+    height: 100vh;
     overflow-y: scroll;
-    height: $fullHeight;
 }
 
-#left header, #left aside, #right .project {
-    overflow: hidden;
-    height: $fullHeight;
+#left {
+    header {
+        @include centerChildren;
+
+        position: relative;
+        top: -6.5vmin; // Substract the top offsets of the relative positioned children to avoid pushing everything down
+
+        #presentation {
+            #greeting {
+                position: relative;
+                top: 6.5vmin;
+                left: -4.5vmin;
+            }
+        }
+
+        #tagline {
+            margin-top: 2vmin;
+        }
+
+        #profiles a {
+            display: inline-block;
+            margin-top: 7vmin;
+            margin-left: 1.5vmin;
+            padding: 1.5vmin 4.5vmin;
+        }
+    }
+
+    header, aside {
+        @include coverHeight;
+    }
+}
+
+#right {
+    .project {
+        @include coverHeight;
+    }
 }
 
 #tagline, .aside-title, .aside-subtitle, .project-title {
     display: block;
+}
+
+// Colors
+
+#left {
+    header {
+        #profiles a {
+            border: 1px solid $secondaryColor;;
+            border-radius: 10vmin;
+        }
+    }
 }

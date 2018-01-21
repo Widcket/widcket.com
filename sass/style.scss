@@ -3,6 +3,13 @@
 $mainFont: 'Montserrat', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 $secondaryFont: 'Nothing You Could Do', Georgia, Times, serif;
 
+// Mixins
+
+@mixin secondaryFontRules {
+    font-family: $secondaryFont;
+    letter-spacing: -0.1rem;
+}
+
 // Grid
 
 #grid {
@@ -21,7 +28,8 @@ $secondaryFont: 'Nothing You Could Do', Georgia, Times, serif;
 // Fonts
 
 #greeting {
-    font-family: $secondaryFont;
+    @include secondaryFontRules;
+
     font-size: 3rem;
 }
 

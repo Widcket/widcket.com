@@ -150,8 +150,6 @@ module.exports = reloadCSS;
 require("../node_modules/ress/ress.css");
 
 require("../sass/style.scss");
-
-console.log("Hello world");
 },{"../node_modules/ress/ress.css":4,"../sass/style.scss":3}],0:[function(require,module,exports) {
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;

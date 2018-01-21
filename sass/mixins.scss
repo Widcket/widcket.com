@@ -1,0 +1,28 @@
+@import "variables.scss";
+
+@mixin coverHeight {
+    overflow: hidden;
+    height: 100vh;
+}
+
+@mixin centerChildren {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin mainFontLight {
+    font-family: $mainFont;
+    font-weight: 400;
+}
+
+@mixin mainFontMedium {
+    font-family: $mainFont;
+    font-weight: 400;
+}
+
+@mixin mainFontExtraBold {
+    font-family: $mainFont;
+    font-weight: 800;
+}

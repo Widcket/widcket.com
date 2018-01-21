@@ -1,37 +1,5 @@
-// Variables
-
-$mainFont: 'Montserrat', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-$secondaryFont: 'Nothing You Could Do', Georgia, Times, serif;
-$secondaryColor: black; // Temporary
-
-// Mixins
-
-@mixin coverHeight {
-    overflow: hidden;
-    height: 100vh;
-}
-
-@mixin centerChildren {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-@mixin mainFontLight {
-    font-family: $mainFont;
-    font-weight: 400;
-}
-
-@mixin mainFontMedium {
-    font-family: $mainFont;
-    font-weight: 400;
-}
-
-@mixin mainFontExtraBold {
-    font-family: $mainFont;
-    font-weight: 800;
-}
+@import "variables.scss";
+@import "mixins.scss";
 
 // Custom resets
 
@@ -144,7 +112,7 @@ a, a:link, a:visited, a:hover, a:active {
 #left {
     header {
         #profiles a {
-            border: 1px solid $secondaryColor;;
+            border: 1px solid $secondaryColor;
             border-radius: 10vmin;
         }
     }

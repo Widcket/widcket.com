@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-auto-flow: row;
-  justify-items: center; }
+  justify-items: stretch; }
 
 #greeting {
   font-family: "Nothing You Could Do", Georgia, Times, serif;
@@ -19,7 +19,15 @@
   font-size: 1.5rem;
   text-transform: uppercase; }
 
-#left header, #right {
+#grid {
+  max-height: 100vh;
+  position: fixed;
+  overflow: hidden; }
+
+#left, #right {
+  overflow-y: scroll; }
+
+#left, #left header, #right, .project {
   height: 100vh; }
 
 #tagline, .aside-title, .aside-subtitle, .project-title {

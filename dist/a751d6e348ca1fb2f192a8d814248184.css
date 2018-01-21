@@ -1,12 +1,8 @@
 #grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; }
-
-#left {
-  grid-column: 1 / 2; }
-
-#right {
-  grid-column: 2 / 2; }
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: row;
+  justify-items: center; }
 
 #greeting {
   font-family: "Nothing You Could Do", Georgia, Times, serif;

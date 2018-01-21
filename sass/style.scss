@@ -15,14 +15,8 @@ $secondaryFont: 'Nothing You Could Do', Georgia, Times, serif;
 #grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
-
-#left {
-    grid-column: 1 / 2;
-}
-
-#right {
-    grid-column: 2 / 2;
+    grid-auto-flow: row; // Change this to column for mobile
+    justify-items: center;
 }
 
 // Fonts

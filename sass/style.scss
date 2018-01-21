@@ -25,20 +25,20 @@ a, a:link, a:visited, a:hover, a:active {
         #presentation {
             #greeting {
                 font-family: $secondaryFont;
-                font-size: 5.833vmin; // TODO: Set a minimum fixed size for mobile
+                font-size: 5.833vmin;
             }
 
             #name {
                 @include mainFontExtraBold;
 
-                font-size: 20.833vmin; // TODO: Set a minimum fixed size for mobile
+                font-size: 20.833vmin;
             }
         }
 
         #tagline {
             @include mainFontLight;
 
-            font-size: 3.333vmin; // TODO: Set a minimum fixed size for mobile
+            font-size: 3.333vmin;
             letter-spacing: 0.083vmin;
             text-transform: uppercase;
         }
@@ -91,6 +91,7 @@ a, a:link, a:visited, a:hover, a:active {
             margin-top: 5.833vmin;
             margin-left: 1.25vmin;
             padding: 1.25vmin 3.75vmin;
+            border-radius: 8.333vmin;
         }
     }
 
@@ -109,13 +110,12 @@ a, a:link, a:visited, a:hover, a:active {
     display: block;
 }
 
-// Colors
+// Lines & colors
 
 #left {
     header {
         #profiles a {
             border: 1px solid $secondaryColor;
-            border-radius: 8.333vmin;
         }
     }
 }

@@ -1,3 +1,10 @@
+// Variables
+
+$mainFont: 'Montserrat', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+$secondaryFont: 'Nothing You Could Do', Georgia, Times, serif;
+
+// Grid
+
 #grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -9,6 +16,32 @@
 
 #right {
     grid-column: 2 / 2;
+}
+
+// Fonts
+
+#greeting {
+    font-family: $secondaryFont;
+    font-size: 3rem;
+}
+
+#name {
+    font-family: $mainFont;
+    font-weight: 800;
+    font-size: 10rem;
+}
+
+#tagline {
+    font-family: $mainFont;
+    font-weight: 300;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+// Display
+
+#left header, #right {
+    height: 100vh;
 }
 
 #tagline, .aside-title, .aside-subtitle, .project-title {

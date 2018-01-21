@@ -8,5 +8,23 @@
 #right {
   grid-column: 2 / 2; }
 
+#greeting {
+  font-family: "Nothing You Could Do", Georgia, Times, serif;
+  font-size: 3rem; }
+
+#name {
+  font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 10rem; }
+
+#tagline {
+  font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  text-transform: uppercase; }
+
+#left header, #right {
+  height: 100vh; }
+
 #tagline, .aside-title, .aside-subtitle, .project-title {
   display: block; }

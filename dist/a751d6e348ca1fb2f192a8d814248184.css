@@ -373,29 +373,31 @@ a, a:link, a:visited, a:hover, a:active {
 
 #left, #right {
   height: 100vh;
-  overflow-y: scroll; }
+  overflow-y: auto; }
 
 #left header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
   min-width: 52.5vmin; }
   #left header #presentation {
-    top: -5.417vmin; }
+    margin-top: -5.417vmin; }
     #left header #presentation #greeting {
       position: relative;
       top: 5.417vmin;
       left: -3.75vmin; }
   #left header #tagline {
     margin-top: 1.667vmin; }
-  #left header #profiles a {
-    display: inline-block;
-    margin-top: 5.833vmin;
-    margin-left: 1.25vmin;
-    padding: 1.25vmin 3.75vmin;
-    border-radius: 8.333vmin; }
+  #left header #profiles {
+    margin-top: 5.833vmin; }
+    #left header #profiles a {
+      display: inline-block;
+      margin-left: 1.25vmin;
+      padding: 1.25vmin 3.75vmin;
+      border-radius: 8.333vmin; }
+    #left header #profiles a:first-child {
+      margin-left: 0vmin; }
 
 #left header, #left aside {
   overflow: hidden;

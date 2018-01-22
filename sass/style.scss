@@ -62,18 +62,17 @@ a, a:link, a:visited, a:hover, a:active {
 
 #left, #right {
     height: 100vh;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 #left {
     header {
         @include centerChildren;
 
-        position: relative;
         min-width: 52.5vmin;
 
         #presentation {
-            top: -5.417vmin; // Substract the top offsets of the relative positioned children to avoid pushing everything down
+            margin-top: -5.417vmin; // Substract the top offsets of the relative positioned children to avoid pushing everything down
 
             #greeting {
                 position: relative;
@@ -86,12 +85,19 @@ a, a:link, a:visited, a:hover, a:active {
             margin-top: 1.667vmin;
         }
 
-        #profiles a {
-            display: inline-block;
+        #profiles {
             margin-top: 5.833vmin;
-            margin-left: 1.25vmin;
-            padding: 1.25vmin 3.75vmin;
-            border-radius: 8.333vmin;
+
+            a {
+                display: inline-block;
+                margin-left: 1.25vmin;
+                padding: 1.25vmin 3.75vmin;
+                border-radius: 8.333vmin;
+            }
+
+            a:first-child {
+                margin-left: 0vmin;
+            }
         }
     }
 

@@ -12,17 +12,17 @@
     align-items: center;
 }
 
-@mixin mainFontLight {
-    font-family: $mainFont;
+@mixin primaryFontLight {
+    font-family: $primaryFont;
     font-weight: 400;
 }
 
-@mixin mainFontMedium {
-    font-family: $mainFont;
+@mixin primaryFontMedium {
+    font-family: $primaryFont;
     font-weight: 400;
 }
 
-@mixin mainFontExtraBold {
-    font-family: $mainFont;
+@mixin primaryFontExtraBold {
+    font-family: $primaryFont;
     font-weight: 800;
 }

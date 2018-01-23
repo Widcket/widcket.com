@@ -18,6 +18,18 @@ a, a:link, a:visited, a:hover, a:active {
     justify-items: stretch;
 }
 
+#left {
+    #competencies {
+        .aside-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            justify-items: stretch;
+            align-items: end;
+        }
+    }
+}
+
 // Fonts
 
 #left {
@@ -25,29 +37,50 @@ a, a:link, a:visited, a:hover, a:active {
         #presentation {
             #greeting {
                 font-family: $secondaryFont;
-                font-size: 5.833vmin;
+                font-size: 3vmax;
             }
 
             #name {
-                @include mainFontExtraBold;
+                @include primaryFontExtraBold;
 
-                font-size: 20.833vmin;
+                font-size: 10.8vmax;
             }
         }
 
         #tagline {
-            @include mainFontLight;
+            @include primaryFontLight;
 
-            font-size: 3.333vmin;
-            letter-spacing: 0.083vmin;
+            font-size: 1.7vmax;
+            letter-spacing: 0.07vmax;
             text-transform: uppercase;
         }
 
         #profiles a {
-            @include mainFontMedium;
+            @include primaryFontMedium;
 
-            font-size: 2.083vmin;
+            font-size: 1.2vmax;
             text-transform: lowercase;
+        }
+    }
+
+    #competencies {
+        .aside-list {
+            width: 75%;
+            height: 50%;
+            margin: 0 auto;
+        }
+    }
+
+    aside {
+        .aside-title {
+            @include primaryFontMedium;
+
+            font-size: 1.5vmax;
+            text-transform: uppercase;
+        }
+
+        .aside-list-item {
+            @include primaryFontMedium;
         }
     }
 }
@@ -58,6 +91,7 @@ a, a:link, a:visited, a:hover, a:active {
     max-height: 100vh;
     position: fixed;
     overflow: hidden;
+    padding: 2rem;
 }
 
 #left, #right {
@@ -69,34 +103,34 @@ a, a:link, a:visited, a:hover, a:active {
     header {
         @include centerChildren;
 
-        min-width: 52.5vmin;
+        margin-top: -2rem; // Substract the bezel
 
         #presentation {
-            margin-top: -5.417vmin; // Substract the top offsets of the relative positioned children to avoid pushing everything down
+            margin-top: -2.6vmax; // Substract the top offsets of the relative positioned children to avoid pushing everything down
 
             #greeting {
                 position: relative;
-                top: 5.417vmin;
-                left: -3.75vmin;
+                top: 2.6vmax;
+                left: -2vmax;
+                overflow: visible;
             }
         }
 
         #tagline {
-            margin-top: 1.667vmin;
+            margin: 0.7vmax 0vmax 2.8vmax 0vmax;
+            text-align: center;
         }
 
         #profiles {
-            margin-top: 5.833vmin;
-
             a {
                 display: inline-block;
-                margin-left: 1.25vmin;
-                padding: 1.25vmin 3.75vmin;
-                border-radius: 8.333vmin;
+                margin-left: 1vmax;
+                padding: 0.55vmax 2vmax;
+                border-radius: 9vmax;
             }
 
             a:first-child {
-                margin-left: 0vmin;
+                margin-left: 0vmax;
             }
         }
     }
@@ -122,6 +156,12 @@ a, a:link, a:visited, a:hover, a:active {
     header {
         #profiles a {
             border: 1px solid $secondaryColor;
+        }
+    }
+
+    aside {
+        .aside-list-item {
+            list-style-type: none;
         }
     }
 }

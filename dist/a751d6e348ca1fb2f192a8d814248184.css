@@ -339,17 +339,28 @@ a, a:link, a:visited, a:hover, a:active {
 
 #grid {
   display: grid;
+  justify-items: stretch;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1.5rem;
-  grid-auto-flow: row;
-  justify-items: stretch; }
+  grid-auto-flow: row; }
 
 #left #competencies .aside-list {
   display: grid;
+  justify-items: stretch;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  justify-items: stretch;
-  align-items: end; }
+  align-items: center; }
+
+#left #skills .aside-sublists {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start; }
+  #left #skills .aside-sublists .aside-sublist {
+    display: grid;
+    justify-items: stretch;
+    flex-basis: 50%; }
 
 #left header #presentation #greeting {
   font-family: "Nothing You Could Do", Georgia, Times, serif;
@@ -373,21 +384,27 @@ a, a:link, a:visited, a:hover, a:active {
   font-size: 1.2vmax;
   text-transform: lowercase; }
 
-#left #competencies .aside-list {
-  width: 75%;
-  height: 50%;
-  margin: 0 auto; }
-
 #left aside .aside-title {
   font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: 800;
-  font-size: 1.5vmax;
+  font-size: calc(14px + 0.1vmax);
+  letter-spacing: calc(2px + 0.01vmax);
   text-transform: uppercase; }
 
-#left aside .aside-list-item {
+#left aside .aside-subtitle {
+  font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: calc(12px + 0.3vmax); }
+
+#left aside .aside-list .aside-list-item {
   font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: calc(10px + 0.5vmax); }
+
+#left aside .aside-sublist .aside-list-item {
+  font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: calc(10px + 0.3vmax); }
 
 #grid {
   max-height: 100vh;
@@ -410,10 +427,9 @@ a, a:link, a:visited, a:hover, a:active {
     #left header #presentation #greeting {
       position: relative;
       top: 2.6vmax;
-      left: -2vmax;
-      overflow: visible; }
+      left: -2vmax; }
   #left header #tagline {
-    margin: 0.7vmax 0vmax 2.8vmax 0vmax;
+    margin: 0.7vmax 0 2.8vmax 0;
     text-align: center; }
   #left header #profiles a {
     display: inline-block;
@@ -421,7 +437,27 @@ a, a:link, a:visited, a:hover, a:active {
     padding: 0.55vmax 2vmax;
     border-radius: 9vmax; }
   #left header #profiles a:first-child {
-    margin-left: 0vmax; }
+    margin-left: 0; }
+
+#left aside#competencies .aside-list {
+  margin: 0 auto; }
+
+#left aside .aside-list, #left aside .aside-sublists {
+  margin-top: 3%; }
+
+#left aside .aside-list {
+  width: 75%;
+  height: 50%; }
+  #left aside .aside-list .aside-title {
+    margin-left: 2%; }
+
+#left aside .aside-sublists {
+  max-width: calc(75% + 10%);
+  margin: 0 auto; }
+  #left aside .aside-sublists .aside-sublist {
+    margin-top: 5%; }
+    #left aside .aside-sublists .aside-sublist .aside-list-item {
+      margin-top: 3%; }
 
 #left header, #left aside {
   overflow: hidden;

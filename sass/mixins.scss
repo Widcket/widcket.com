@@ -1,5 +1,10 @@
 @import "variables.scss";
 
+@mixin stretchGrid {
+    display: grid;
+    justify-items: stretch;
+}
+
 @mixin coverHeight {
     overflow: hidden;
     height: 100vh;

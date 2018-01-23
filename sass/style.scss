@@ -8,24 +8,40 @@ a, a:link, a:visited, a:hover, a:active {
     text-decoration: none;
 }
 
-// Grid
+// Grids
 
 #grid {
-    display: grid;
+    @include stretchGrid;
+
     grid-template-columns: 1fr 1fr;
     grid-gap: 1.5rem;
     grid-auto-flow: row; // TODO: Change this to column for mobile
-    justify-items: stretch;
 }
 
 #left {
     #competencies {
         .aside-list {
-            display: grid;
+            @include stretchGrid;
+
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr 1fr;
-            justify-items: stretch;
-            align-items: end;
+            align-items: center;
+        }
+    }
+
+    #skills {
+        .aside-sublists {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: start;
+
+            .aside-sublist {
+                @include stretchGrid;
+
+                flex-basis: 50%;
+            }
         }
     }
 }
@@ -55,19 +71,13 @@ a, a:link, a:visited, a:hover, a:active {
             text-transform: uppercase;
         }
 
-        #profiles a {
-            @include primaryFontMedium;
+        #profiles {
+            a {
+                @include primaryFontMedium;
 
-            font-size: 1.2vmax;
-            text-transform: lowercase;
-        }
-    }
-
-    #competencies {
-        .aside-list {
-            width: 75%;
-            height: 50%;
-            margin: 0 auto;
+                font-size: 1.2vmax;
+                text-transform: lowercase;
+            }
         }
     }
 
@@ -75,14 +85,31 @@ a, a:link, a:visited, a:hover, a:active {
         .aside-title {
             @include primaryFontExtraBold;
 
-            font-size: 1.5vmax;
+            font-size: calc(14px + 0.1vmax);
+            letter-spacing: calc(2px + 0.01vmax);;
             text-transform: uppercase;
         }
 
-        .aside-list-item {
-            @include primaryFontMedium;
+        .aside-subtitle {
+            @include primaryFontExtraBold;
 
-            font-size: calc(10px + 0.5vmax);
+            font-size: calc(12px + 0.3vmax);
+        }
+
+        .aside-list {
+            .aside-list-item {
+                @include primaryFontMedium;
+
+                font-size: calc(10px + 0.5vmax);
+            }
+        }
+
+        .aside-sublist {
+            .aside-list-item {
+                @include primaryFontLight;
+
+                font-size: calc(10px + 0.3vmax);
+            }
         }
     }
 }
@@ -114,12 +141,11 @@ a, a:link, a:visited, a:hover, a:active {
                 position: relative;
                 top: 2.6vmax;
                 left: -2vmax;
-                overflow: visible;
             }
         }
 
         #tagline {
-            margin: 0.7vmax 0vmax 2.8vmax 0vmax;
+            margin: 0.7vmax 0 2.8vmax 0;
             text-align: center;
         }
 
@@ -132,7 +158,41 @@ a, a:link, a:visited, a:hover, a:active {
             }
 
             a:first-child {
-                margin-left: 0vmax;
+                margin-left: 0;
+            }
+        }
+    }
+
+    aside {
+        &#competencies {
+            .aside-list {
+                margin: 0 auto;
+            }
+        }
+
+        .aside-list, .aside-sublists {
+            margin-top: 3%;
+        }
+
+        .aside-list {
+            width: $asideContentWidth;
+            height: 50%;
+
+            .aside-title {
+                margin-left: 2%;
+            }
+        }
+
+        .aside-sublists {
+            max-width: calc(#{$asideContentWidth} + 10%);
+            margin: 0 auto;
+
+            .aside-sublist {
+                margin-top: 5%;
+
+                .aside-list-item {
+                    margin-top: 3%;
+                }
             }
         }
     }
@@ -156,8 +216,10 @@ a, a:link, a:visited, a:hover, a:active {
 
 #left {
     header {
-        #profiles a {
-            border: 1px solid $secondaryColor;
+        #profiles {
+            a {
+                border: 1px solid $secondaryColor;
+            }
         }
     }
 

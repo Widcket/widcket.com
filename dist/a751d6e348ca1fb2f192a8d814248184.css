@@ -386,7 +386,8 @@ a, a:link, a:visited, a:hover, a:active {
 
 #left aside .aside-list-item {
   font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-weight: 400; }
+  font-weight: 400;
+  font-size: calc(10px + 0.5vmax); }
 
 #grid {
   max-height: 100vh;

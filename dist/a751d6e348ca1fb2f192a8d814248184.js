@@ -100,7 +100,7 @@ function getBaseURL(url) {
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
 
-},{}],5:[function(require,module,exports) {
+},{}],7:[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -132,25 +132,26 @@ function reloadCSS() {
 
 module.exports = reloadCSS;
 
-},{"./bundle-url":8}],4:[function(require,module,exports) {
+},{"./bundle-url":8}],6:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":5}],3:[function(require,module,exports) {
+},{"_css_loader":7}],5:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":5}],2:[function(require,module,exports) {
-"use strict";
+},{"_css_loader":7}],3:[function(require,module,exports) {
+'use strict';
 
-require("../node_modules/ress/ress.css");
+require('../node_modules/ress/ress.css');
 
-require("../sass/style.scss");
-},{"../node_modules/ress/ress.css":4,"../sass/style.scss":3}],0:[function(require,module,exports) {
+require('../sass/style.scss');
+},{"../node_modules/ress/ress.css":6,"../sass/style.scss":5}],20:[function(require,module,exports) {
+
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
 function Module() {
@@ -168,8 +169,9 @@ function Module() {
 module.bundle.Module = Module;
 
 if (!module.bundle.parent && typeof WebSocket !== 'undefined') {
-  var ws = new WebSocket('ws://' + window.location.hostname + ':58417/');
-  ws.onmessage = function(event) {
+  var hostname = '' || location.hostname;
+  var ws = new WebSocket('ws://' + hostname + ':' + '49549' + '/');
+  ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
     if (data.type === 'update') {
@@ -187,8 +189,8 @@ if (!module.bundle.parent && typeof WebSocket !== 'undefined') {
     if (data.type === 'reload') {
       ws.close();
       ws.onclose = function () {
-        window.location.reload();
-      }
+        location.reload();
+      };
     }
 
     if (data.type === 'error-resolved') {
@@ -213,7 +215,7 @@ function getParents(bundle, id) {
   for (k in modules) {
     for (d in modules[k][1]) {
       dep = modules[k][1][d];
-      if (dep === id || (Array.isArray(dep) && dep[dep.length - 1] === id)) {
+      if (dep === id || Array.isArray(dep) && dep[dep.length - 1] === id) {
         parents.push(+k);
       }
     }
@@ -266,7 +268,8 @@ function hmrAccept(bundle, id) {
   }
 
   return getParents(global.require, id).some(function (id) {
-    return hmrAccept(global.require, id)
+    return hmrAccept(global.require, id);
   });
 }
-},{}]},{},[0,2])
+},{}]},{},[20,3])
+//# sourceMappingURL=/dist/a751d6e348ca1fb2f192a8d814248184.map

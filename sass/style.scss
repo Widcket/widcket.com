@@ -171,7 +171,7 @@ a, a:link, a:visited, a:hover, a:active {
         }
 
         .aside-list, .aside-sublists {
-            margin-top: 3%;
+            margin-top: 4%;
         }
 
         .aside-list {
@@ -200,11 +200,21 @@ a, a:link, a:visited, a:hover, a:active {
     header, aside {
         @include coverHeight;
     }
+
+
 }
 
 #right {
     .project {
         @include coverHeight;
+
+        .project-image {
+            width: 20vw;
+            margin-right: 1rem;
+            float: left;
+            position: relative;
+            top: -15px;
+        }
     }
 }
 

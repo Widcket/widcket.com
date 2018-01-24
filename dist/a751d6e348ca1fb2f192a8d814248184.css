@@ -443,7 +443,7 @@ a, a:link, a:visited, a:hover, a:active {
   margin: 0 auto; }
 
 #left aside .aside-list, #left aside .aside-sublists {
-  margin-top: 3%; }
+  margin-top: 4%; }
 
 #left aside .aside-list {
   width: 75%;
@@ -466,6 +466,12 @@ a, a:link, a:visited, a:hover, a:active {
 #right .project {
   overflow: hidden;
   height: 100vh; }
+  #right .project .project-image {
+    width: 20vw;
+    margin-right: 1rem;
+    float: left;
+    position: relative;
+    top: -15px; }
 
 #tagline, .aside-title, .aside-subtitle, .project-title {
   display: block; }

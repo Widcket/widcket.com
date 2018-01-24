@@ -439,25 +439,26 @@ a, a:link, a:visited, a:hover, a:active {
   #left header #profiles a:first-child {
     margin-left: 0; }
 
-#left aside#competencies .aside-list {
-  margin: 0 auto; }
-
-#left aside .aside-list, #left aside .aside-sublists {
-  margin-top: 4%; }
-
-#left aside .aside-list {
-  width: 75%;
-  height: 50%; }
-  #left aside .aside-list .aside-title {
-    margin-left: 2%; }
-
-#left aside .aside-sublists {
-  max-width: calc(75% + 10%);
-  margin: 0 auto; }
-  #left aside .aside-sublists .aside-sublist {
-    margin-top: 5%; }
-    #left aside .aside-sublists .aside-sublist .aside-list-item {
-      margin-top: 3%; }
+#left aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  #left aside#competencies .aside-list {
+    margin: 0 auto; }
+  #left aside .aside-list, #left aside .aside-sublists {
+    margin-top: 4%; }
+  #left aside .aside-list {
+    width: 75%;
+    height: 50%; }
+    #left aside .aside-list .aside-title {
+      margin-left: 2%; }
+  #left aside .aside-sublists {
+    max-width: calc(75% + 10%);
+    margin: 0 auto; }
+    #left aside .aside-sublists .aside-sublist {
+      margin-top: 5%; }
+      #left aside .aside-sublists .aside-sublist .aside-list-item {
+        margin-top: 3%; }
 
 #left header, #left aside {
   overflow: hidden;
@@ -467,11 +468,10 @@ a, a:link, a:visited, a:hover, a:active {
   overflow: hidden;
   height: 100vh; }
   #right .project .project-image {
-    width: 20vw;
+    width: 20vmax;
     margin-right: 1rem;
     float: left;
-    position: relative;
-    top: -15px; }
+    position: relative; }
 
 #tagline, .aside-title, .aside-subtitle, .project-title {
   display: block; }

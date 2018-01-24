@@ -164,6 +164,8 @@ a, a:link, a:visited, a:hover, a:active {
     }
 
     aside {
+        @include centerChildrenVertically;
+
         &#competencies {
             .aside-list {
                 margin: 0 auto;
@@ -200,8 +202,6 @@ a, a:link, a:visited, a:hover, a:active {
     header, aside {
         @include coverHeight;
     }
-
-
 }
 
 #right {
@@ -209,11 +209,10 @@ a, a:link, a:visited, a:hover, a:active {
         @include coverHeight;
 
         .project-image {
-            width: 20vw;
+            width: 20vmax;
             margin-right: 1rem;
             float: left;
             position: relative;
-            top: -15px;
         }
     }
 }

@@ -10,10 +10,15 @@
     height: 100vh;
 }
 
-@mixin centerChildren {
+@mixin centerChildrenVertically {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+@mixin centerChildren {
+    @include centerChildrenVertically;
+
     align-items: center;
 }
 

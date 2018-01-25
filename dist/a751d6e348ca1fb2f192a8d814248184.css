@@ -346,8 +346,7 @@ a, a:link, a:visited, a:hover, a:active {
 
 #left #competencies .aside-list {
   display: grid;
-  justify-items: stretch;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: max-content max-content;
   grid-template-rows: 1fr 1fr 1fr;
   grid-column-gap: 2rem;
   grid-row-gap: 5vmax; }
@@ -369,69 +368,63 @@ a, a:link, a:visited, a:hover, a:active {
   grid-auto-flow: column;
   grid-gap: 2rem; }
 
-#left header #presentation #greeting {
-  font-family: "Nothing You Could Do", Georgia, Times, serif;
-  font-size: calc(10px + 2vmax); }
+#left {
+  padding-left: 2rem; }
+  #left header #presentation #greeting {
+    font-family: "Nothing You Could Do", Georgia, Times, serif;
+    font-size: calc(10px + 2vmax); }
+  #left header #presentation #name {
+    font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: calc(10px + 10.5vmax); }
+  #left header #tagline {
+    font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1.6vmax;
+    letter-spacing: calc(1px + 0.12vmax);
+    text-transform: uppercase;
+    text-align: center; }
+  #left header #profiles a {
+    font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: calc(10px + 0.4vmax);
+    text-transform: lowercase; }
+  #left aside .aside-title {
+    font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: calc(14px + 0.1vmax);
+    letter-spacing: calc(2px + 0.01vmax);
+    text-transform: uppercase; }
+  #left aside .aside-subtitle {
+    font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: calc(12px + 0.3vmax); }
+  #left aside .aside-list .aside-list-item {
+    font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: calc(10px + 0.5vmax);
+    line-height: calc(10px + 1vmax); }
+  #left aside .aside-sublist .aside-list-item {
+    font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: calc(10px + 0.4vmax); }
 
-#left header #presentation #name {
-  font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-weight: 800;
-  font-size: calc(10px + 10.5vmax); }
-
-#left header #tagline {
-  font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-weight: 400;
-  font-size: 1.6vmax;
-  letter-spacing: calc(1px + 0.12vmax);
-  text-transform: uppercase;
-  text-align: center; }
-
-#left header #profiles a {
-  font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-weight: 400;
-  font-size: calc(10px + 0.4vmax);
-  text-transform: lowercase; }
-
-#left aside .aside-title {
-  font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-weight: 800;
-  font-size: calc(14px + 0.1vmax);
-  letter-spacing: calc(2px + 0.01vmax);
-  text-transform: uppercase; }
-
-#left aside .aside-subtitle {
-  font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-weight: 800;
-  font-size: calc(12px + 0.3vmax); }
-
-#left aside .aside-list .aside-list-item {
-  font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-weight: 400;
-  font-size: calc(10px + 0.5vmax);
-  line-height: calc(10px + 1vmax); }
-
-#left aside .aside-sublist .aside-list-item {
-  font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-size: calc(10px + 0.4vmax); }
-
-#right .project .project-title {
-  font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-weight: 800;
-  font-size: calc(14px + 0.6vmax); }
-
-#right .project .project-description {
-  font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-weight: 400;
-  font-size: calc(10px + 0.3vmax); }
-
-#right .project .project-participation {
-  font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-size: calc(8px + 0.2vmax);
-  text-transform: uppercase; }
-
-#right .project .project-story {
-  font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-size: calc(12px + 0.4vmax); }
+#right {
+  padding-right: 2rem; }
+  #right .project .project-title {
+    font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: calc(14px + 0.6vmax); }
+  #right .project .project-description {
+    font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: calc(10px + 0.3vmax); }
+  #right .project .project-participation {
+    font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: calc(8px + 0.2vmax);
+    text-transform: uppercase; }
+  #right .project .project-story {
+    font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: calc(12px + 0.4vmax); }
 
 #grid {
   max-height: 100vh;
@@ -473,7 +466,6 @@ a, a:link, a:visited, a:hover, a:active {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   height: calc(100vh - 2rem); }
 
 #left aside#competencies .aside-list {

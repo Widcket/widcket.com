@@ -34,7 +34,7 @@ a, a:link, a:visited, a:hover, a:active {
         .aside-sublists {
             display: grid;
             grid-gap: 2vmax;
-            grid-template-columns: max-content max-content;
+            grid-template-columns: max-content max-content; // TODO: Disable this to row for mobile
             grid-template-rows: min-content min-content;
 
             .aside-sublist {
@@ -50,7 +50,8 @@ a, a:link, a:visited, a:hover, a:active {
 #right {
     .project {
         display: grid;
-        grid-template-columns: min-content 1fr;
+        grid-auto-columns: min-content 1fr; // TODO: Change this to row for mobile
+        grid-auto-flow: column; // TODO: Change this to row for mobile
         grid-gap: 2rem;
     }
 }
@@ -62,21 +63,21 @@ a, a:link, a:visited, a:hover, a:active {
         #presentation {
             #greeting {
                 font-family: $secondaryFont;
-                font-size: 3vmax;
+                font-size: calc(10px + 2vmax);
             }
 
             #name {
                 @include primaryFontExtraBold;
 
-                font-size: 10.8vmax;
+                font-size: calc(10px + 10.5vmax);
             }
         }
 
         #tagline {
             @include primaryFontLight;
 
-            font-size: 1.7vmax;
-            letter-spacing: 0.07vmax;
+            font-size: 1.6vmax;
+            letter-spacing: calc(1px + 0.12vmax);
             text-transform: uppercase;
             text-align: center;
         }
@@ -85,7 +86,7 @@ a, a:link, a:visited, a:hover, a:active {
             a {
                 @include primaryFontMedium;
 
-                font-size: 1.2vmax;
+                font-size: calc(10px + 0.4vmax);
                 text-transform: lowercase;
             }
         }
@@ -228,6 +229,11 @@ a, a:link, a:visited, a:hover, a:active {
             max-width: 20vw;
         }
     }
+}
+
+#tagline {
+    position: relative;
+    left: 0.13vmax;
 }
 
 #tagline, .aside-title, .aside-subtitle, .project-title {

@@ -365,30 +365,31 @@ a, a:link, a:visited, a:hover, a:active {
 
 #right .project {
   display: grid;
-  grid-template-columns: min-content 1fr;
+  grid-auto-columns: min-content 1fr;
+  grid-auto-flow: column;
   grid-gap: 2rem; }
 
 #left header #presentation #greeting {
   font-family: "Nothing You Could Do", Georgia, Times, serif;
-  font-size: 3vmax; }
+  font-size: calc(10px + 2vmax); }
 
 #left header #presentation #name {
   font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: 800;
-  font-size: 10.8vmax; }
+  font-size: calc(10px + 10.5vmax); }
 
 #left header #tagline {
   font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: 400;
-  font-size: 1.7vmax;
-  letter-spacing: 0.07vmax;
+  font-size: 1.6vmax;
+  letter-spacing: calc(1px + 0.12vmax);
   text-transform: uppercase;
   text-align: center; }
 
 #left header #profiles a {
   font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: 400;
-  font-size: 1.2vmax;
+  font-size: calc(10px + 0.4vmax);
   text-transform: lowercase; }
 
 #left aside .aside-title {
@@ -484,6 +485,10 @@ a, a:link, a:visited, a:hover, a:active {
   #right .project .project-image {
     max-height: calc(100vh - 4rem);
     max-width: 20vw; }
+
+#tagline {
+  position: relative;
+  left: 0.13vmax; }
 
 #tagline, .aside-title, .aside-subtitle, .project-title {
   display: block; }

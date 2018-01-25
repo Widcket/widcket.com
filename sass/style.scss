@@ -125,6 +125,16 @@ a, a:link, a:visited, a:hover, a:active {
     }
 }
 
+#right {
+    .project {
+        .project-title {
+            @include primaryFontExtraBold;
+
+            font-size: calc(14px + 0.6vmax);
+        }
+    }
+}
+
 // Display & positioning
 
 #grid {

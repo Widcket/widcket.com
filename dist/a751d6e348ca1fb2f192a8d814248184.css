@@ -414,6 +414,11 @@ a, a:link, a:visited, a:hover, a:active {
   font-weight: 400;
   font-size: calc(10px + 0.3vmax); }
 
+#right .project .project-title {
+  font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: calc(14px + 0.6vmax); }
+
 #grid {
   max-height: 100vh;
   position: fixed;

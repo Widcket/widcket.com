@@ -420,6 +420,22 @@ a, a:link, a:visited, a:hover, a:active {
   font-weight: 800;
   font-size: calc(14px + 0.6vmax); }
 
+#right .project .project-description {
+  font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: calc(10px + 0.3vmax); }
+
+#right .project .project-participation {
+  font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: calc(8px + 0.2vmax);
+  text-transform: uppercase; }
+
+#right .project .project-story {
+  font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: calc(12px + 0.4vmax); }
+
 #grid {
   max-height: 100vh;
   position: fixed;
@@ -485,6 +501,12 @@ a, a:link, a:visited, a:hover, a:active {
   #right .project .project-image {
     max-height: calc(100vh - 4rem);
     max-width: 20vw; }
+  #right .project .project-description {
+    margin-top: 1rem; }
+  #right .project .project-participation {
+    margin-top: 1rem; }
+  #right .project .project-story {
+    margin-top: 2em; }
 
 #tagline {
   position: relative;

@@ -133,6 +133,25 @@ a, a:link, a:visited, a:hover, a:active {
 
             font-size: calc(14px + 0.6vmax);
         }
+
+        .project-description {
+            @include primaryFontLight;
+
+            font-size: calc(10px + 0.3vmax);
+        }
+
+        .project-participation {
+            @include primaryFontLight;
+
+            font-size: calc(8px + 0.2vmax);
+            text-transform: uppercase;
+        }
+
+        .project-story {
+            @include primaryFontMedium;
+
+            font-size: calc(12px + 0.4vmax);
+        }
     }
 }
 
@@ -227,6 +246,18 @@ a, a:link, a:visited, a:hover, a:active {
         .project-image {
             max-height: calc(100vh - #{$bezelWidth * 2});
             max-width: 20vw;
+        }
+
+        .project-description {
+            margin-top: 1rem;
+        }
+
+        .project-participation {
+            margin-top: 1rem;
+        }
+
+        .project-story {
+            margin-top: 2em;
         }
     }
 }

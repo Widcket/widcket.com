@@ -58,8 +58,6 @@ a, a:link, a:visited, a:hover, a:active {
 // Fonts
 
 #left {
-    padding-left: 2rem;
-
     header {
         #presentation {
             #greeting {
@@ -94,6 +92,8 @@ a, a:link, a:visited, a:hover, a:active {
     }
 
     aside {
+        padding-left: 2rem;
+
         .aside-title {
             @include primaryFontExtraBold;
 
@@ -128,9 +128,9 @@ a, a:link, a:visited, a:hover, a:active {
 }
 
 #right {
-    padding-right: 2rem;
-
     .project {
+        padding-right: 2rem;
+
         .project-title {
             @include primaryFontExtraBold;
 

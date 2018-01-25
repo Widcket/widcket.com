@@ -368,27 +368,31 @@ a, a:link, a:visited, a:hover, a:active {
   grid-auto-flow: column;
   grid-gap: 2rem; }
 
-#left {
+#left header #presentation #greeting {
+  font-family: "Nothing You Could Do", Georgia, Times, serif;
+  font-size: calc(10px + 2vmax); }
+
+#left header #presentation #name {
+  font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: calc(10px + 10.5vmax); }
+
+#left header #tagline {
+  font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.6vmax;
+  letter-spacing: calc(1px + 0.12vmax);
+  text-transform: uppercase;
+  text-align: center; }
+
+#left header #profiles a {
+  font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: calc(10px + 0.4vmax);
+  text-transform: lowercase; }
+
+#left aside {
   padding-left: 2rem; }
-  #left header #presentation #greeting {
-    font-family: "Nothing You Could Do", Georgia, Times, serif;
-    font-size: calc(10px + 2vmax); }
-  #left header #presentation #name {
-    font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
-    font-weight: 800;
-    font-size: calc(10px + 10.5vmax); }
-  #left header #tagline {
-    font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
-    font-weight: 400;
-    font-size: 1.6vmax;
-    letter-spacing: calc(1px + 0.12vmax);
-    text-transform: uppercase;
-    text-align: center; }
-  #left header #profiles a {
-    font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
-    font-weight: 400;
-    font-size: calc(10px + 0.4vmax);
-    text-transform: lowercase; }
   #left aside .aside-title {
     font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
     font-weight: 800;
@@ -408,7 +412,7 @@ a, a:link, a:visited, a:hover, a:active {
     font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
     font-size: calc(10px + 0.4vmax); }
 
-#right {
+#right .project {
   padding-right: 2rem; }
   #right .project .project-title {
     font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;

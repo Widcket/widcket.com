@@ -25,24 +25,32 @@ a, a:link, a:visited, a:hover, a:active {
 
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr 1fr;
-            align-items: center;
+            grid-gap: 2rem;
         }
     }
 
     #skills {
         .aside-sublists {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: start;
+            display: grid;
+            grid-gap: 2vmax;
+            grid-template-columns: max-content max-content;
+            grid-template-rows: min-content min-content;
 
             .aside-sublist {
-                @include stretchGrid;
-
-                flex-basis: 50%;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: min-content 1fr;
+                grid-gap: 5%;
             }
         }
+    }
+}
+
+#right {
+    .project {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        grid-gap: 1vmax;
     }
 }
 
@@ -69,6 +77,7 @@ a, a:link, a:visited, a:hover, a:active {
             font-size: 1.7vmax;
             letter-spacing: 0.07vmax;
             text-transform: uppercase;
+            text-align: center;
         }
 
         #profiles {
@@ -101,6 +110,7 @@ a, a:link, a:visited, a:hover, a:active {
                 @include primaryFontMedium;
 
                 font-size: calc(10px + 0.5vmax);
+                line-height: calc(10px + 1vmax);
             }
         }
 
@@ -120,7 +130,7 @@ a, a:link, a:visited, a:hover, a:active {
     max-height: 100vh;
     position: fixed;
     overflow: hidden;
-    padding: 2rem;
+    padding: $bezelWidth;
 }
 
 #left, #right {
@@ -132,7 +142,7 @@ a, a:link, a:visited, a:hover, a:active {
     header {
         @include centerChildren;
 
-        margin-top: -2rem; // Substract the bezel
+        margin-top: -$bezelWidth; // Substract the bezel
 
         #presentation {
             margin-top: -2.6vmax; // Substract the top offsets of the relative positioned children to avoid pushing everything down
@@ -146,7 +156,6 @@ a, a:link, a:visited, a:hover, a:active {
 
         #tagline {
             margin: 0.7vmax 0 2.8vmax 0;
-            text-align: center;
         }
 
         #profiles {
@@ -164,11 +173,20 @@ a, a:link, a:visited, a:hover, a:active {
     }
 
     aside {
-        @include centerChildrenVertically;
+        .aside-title {
+            position: relative;
+            top: 2rem;
+        }
+
+        .aside-content {
+            @include centerChildren;
+
+            height: calc(100vh - #{$bezelWidth});
+        }
 
         &#competencies {
             .aside-list {
-                margin: 0 auto;
+                margin-top: 0;
             }
         }
 
@@ -176,26 +194,8 @@ a, a:link, a:visited, a:hover, a:active {
             margin-top: 4%;
         }
 
-        .aside-list {
-            width: $asideContentWidth;
-            height: 50%;
-
-            .aside-title {
-                margin-left: 2%;
-            }
-        }
-
         .aside-sublists {
-            max-width: calc(#{$asideContentWidth} + 10%);
-            margin: 0 auto;
-
-            .aside-sublist {
-                margin-top: 5%;
-
-                .aside-list-item {
-                    margin-top: 3%;
-                }
-            }
+            margin-top: 0;
         }
     }
 
@@ -209,10 +209,8 @@ a, a:link, a:visited, a:hover, a:active {
         @include coverHeight;
 
         .project-image {
-            width: 20vmax;
+            max-height: calc(100vh - #{$bezelWidth * 2});
             margin-right: 1rem;
-            float: left;
-            position: relative;
         }
     }
 }

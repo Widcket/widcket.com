@@ -366,7 +366,7 @@ a, a:link, a:visited, a:hover, a:active {
 #right .project {
   display: grid;
   grid-template-columns: min-content 1fr;
-  grid-gap: 1vmax; }
+  grid-gap: 2rem; }
 
 #left header #presentation #greeting {
   font-family: "Nothing You Could Do", Georgia, Times, serif;
@@ -472,10 +472,13 @@ a, a:link, a:visited, a:hover, a:active {
 
 #right .project {
   overflow: hidden;
-  height: 100vh; }
+  height: 100vh;
+  justify-items: center;
+  align-items: center;
+  height: calc(100vh - 2rem); }
   #right .project .project-image {
     max-height: calc(100vh - 4rem);
-    margin-right: 1rem; }
+    max-width: 20vw; }
 
 #tagline, .aside-title, .aside-subtitle, .project-title {
   display: block; }

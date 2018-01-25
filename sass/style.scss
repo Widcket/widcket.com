@@ -187,7 +187,7 @@ a, a:link, a:visited, a:hover, a:active {
         }
 
         #tagline {
-            margin: 0.7vmax 0 2.8vmax 0;
+            margin: 0.5vmax 0 2.8vmax 0;
         }
 
         #profiles {
@@ -246,7 +246,7 @@ a, a:link, a:visited, a:hover, a:active {
 
         .project-image {
             max-height: calc(100vh - #{$bezelWidth * 2});
-            max-width: 20vw;
+            max-width: 20vmax;
         }
 
         .project-description {

@@ -411,9 +411,8 @@ a, a:link, a:visited, a:hover, a:active {
   line-height: calc(10px + 1vmax); }
 
 #left aside .aside-sublist .aside-list-item {
-  font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-weight: 400;
-  font-size: calc(10px + 0.3vmax); }
+  font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: calc(10px + 0.4vmax); }
 
 #right .project .project-title {
   font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -426,14 +425,12 @@ a, a:link, a:visited, a:hover, a:active {
   font-size: calc(10px + 0.3vmax); }
 
 #right .project .project-participation {
-  font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-weight: 400;
+  font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: calc(8px + 0.2vmax);
   text-transform: uppercase; }
 
 #right .project .project-story {
-  font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-weight: 400;
+  font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: calc(12px + 0.4vmax); }
 
 #grid {

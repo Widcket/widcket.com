@@ -62,7 +62,7 @@ a, a:link, a:visited, a:hover, a:active {
     header {
         #presentation {
             #greeting {
-                font-family: $secondaryFont;
+                font-family: $accentFont;
                 font-size: calc(10px + 2vmax);
             }
 
@@ -74,7 +74,7 @@ a, a:link, a:visited, a:hover, a:active {
         }
 
         #tagline {
-            @include primaryFontLight;
+            @include primaryFontMedium;
 
             font-size: 1.6vmax;
             letter-spacing: calc(1px + 0.12vmax);
@@ -118,9 +118,9 @@ a, a:link, a:visited, a:hover, a:active {
 
         .aside-sublist {
             .aside-list-item {
-                @include primaryFontLight;
+                font-family: $secondaryFont;
 
-                font-size: calc(10px + 0.3vmax);
+                font-size: calc(10px + 0.4vmax);
             }
         }
     }
@@ -141,15 +141,13 @@ a, a:link, a:visited, a:hover, a:active {
         }
 
         .project-participation {
-            @include primaryFontLight;
-
+            font-family: $secondaryFont;
             font-size: calc(8px + 0.2vmax);
             text-transform: uppercase;
         }
 
         .project-story {
-            @include primaryFontMedium;
-
+            font-family: $secondaryFont;
             font-size: calc(12px + 0.4vmax);
         }
     }

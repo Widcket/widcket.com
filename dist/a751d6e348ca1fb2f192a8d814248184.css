@@ -423,14 +423,15 @@ a, a:link, a:visited, a:hover, a:active {
   #right .project .project-description {
     font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
     font-weight: 400;
-    font-size: calc(10px + 0.3vmax); }
+    font-size: calc(8px + 0.5vmax);
+    line-height: calc(8px + 0.6vmax); }
   #right .project .project-participation {
     font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
     font-size: calc(8px + 0.2vmax);
     text-transform: uppercase; }
   #right .project .project-story {
     font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
-    font-size: calc(12px + 0.4vmax); }
+    font-size: calc(8px + 0.8vmax); }
 
 #grid {
   max-height: 100vh;
@@ -500,7 +501,7 @@ a, a:link, a:visited, a:hover, a:active {
       margin-bottom: 2rem; }
     #right .project .project-image {
       max-height: calc(100vh - 4rem);
-      max-width: 20vmax; }
+      max-width: 18vmax; }
     #right .project .project-description {
       margin-top: 1rem; }
     #right .project .project-participation {

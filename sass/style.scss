@@ -143,7 +143,8 @@ a, a:link, a:visited, a:hover, a:active {
         .project-description {
             @include primaryFontLight;
 
-            font-size: calc(10px + 0.3vmax);
+            font-size: calc(8px + 0.5vmax);
+            line-height: calc(8px + 0.6vmax);
         }
 
         .project-participation {
@@ -154,7 +155,7 @@ a, a:link, a:visited, a:hover, a:active {
 
         .project-story {
             font-family: $secondaryFont;
-            font-size: calc(12px + 0.4vmax);
+            font-size: calc(8px + 0.8vmax);
         }
     }
 }
@@ -266,7 +267,7 @@ a, a:link, a:visited, a:hover, a:active {
 
         .project-image {
             max-height: calc(100vh - #{$bezelWidth * 2});
-            max-width: 20vmax;
+            max-width: 18vmax;
         }
 
         .project-description {

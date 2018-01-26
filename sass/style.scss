@@ -14,7 +14,6 @@ a, a:link, a:visited, a:hover, a:active {
     @include stretchGrid;
 
     grid-template-columns: 1fr 1fr;
-    grid-gap: 1.5rem;
     grid-auto-flow: row; // TODO: Change this to column for mobile
 }
 
@@ -175,6 +174,8 @@ a, a:link, a:visited, a:hover, a:active {
 }
 
 #left {
+    margin-right: 1rem;
+
     header {
         @include centerChildren;
 
@@ -247,6 +248,8 @@ a, a:link, a:visited, a:hover, a:active {
 }
 
 #right {
+    margin-left: 1rem;
+
     .project {
         @include coverHeight;
 

@@ -147,12 +147,6 @@ a, a:link, a:visited, a:hover, a:active {
             line-height: calc(8px + 0.6vmax);
         }
 
-        .project-participation {
-            font-family: $secondaryFont;
-            font-size: calc(8px + 0.2vmax);
-            text-transform: uppercase;
-        }
-
         .project-story {
             font-family: $secondaryFont;
             font-size: calc(8px + 0.7vmax);
@@ -271,11 +265,7 @@ a, a:link, a:visited, a:hover, a:active {
         }
 
         .project-description {
-            margin-top: 1rem;
-        }
-
-        .project-participation {
-            margin-top: 0.6rem;
+            margin-top: 0.7rem;
         }
 
         .project-story {

@@ -425,10 +425,6 @@ a, a:link, a:visited, a:hover, a:active {
     font-weight: 400;
     font-size: calc(8px + 0.5vmax);
     line-height: calc(8px + 0.6vmax); }
-  #right .project .project-participation {
-    font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
-    font-size: calc(8px + 0.2vmax);
-    text-transform: uppercase; }
   #right .project .project-story {
     font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
     font-size: calc(8px + 0.7vmax); }
@@ -503,9 +499,7 @@ a, a:link, a:visited, a:hover, a:active {
       max-height: calc(100vh - 4rem);
       max-width: 18vmax; }
     #right .project .project-description {
-      margin-top: 1rem; }
-    #right .project .project-participation {
-      margin-top: 0.6rem; }
+      margin-top: 0.7rem; }
     #right .project .project-story {
       margin-top: 1.6em; }
 

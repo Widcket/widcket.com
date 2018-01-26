@@ -114,13 +114,18 @@ a, a:link, a:visited, a:hover, a:active {
 
                 font-size: calc(10px + 0.5vmax);
                 line-height: calc(10px + 1vmax);
+
+                .aside-pill {
+                    font-family: $secondaryFont;
+                    font-size: calc(8px + 0.2vmax);
+                    text-transform: uppercase;
+                }
             }
         }
 
         .aside-sublist {
             .aside-list-item {
                 font-family: $secondaryFont;
-
                 font-size: calc(10px + 0.4vmax);
             }
         }
@@ -229,6 +234,11 @@ a, a:link, a:visited, a:hover, a:active {
 
         .aside-sublists {
             margin-top: 0;
+
+            .aside-pills {
+                display: inline;
+                margin-left: 0.3rem;
+            }
         }
     }
 

@@ -408,6 +408,10 @@ a, a:link, a:visited, a:hover, a:active {
     font-weight: 400;
     font-size: calc(10px + 0.5vmax);
     line-height: calc(10px + 1vmax); }
+    #left aside .aside-list .aside-list-item .aside-pill {
+      font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
+      font-size: calc(8px + 0.2vmax);
+      text-transform: uppercase; }
   #left aside .aside-sublist .aside-list-item {
     font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
     font-size: calc(10px + 0.4vmax); }
@@ -481,6 +485,9 @@ a, a:link, a:visited, a:hover, a:active {
 
 #left aside .aside-sublists {
   margin-top: 0; }
+  #left aside .aside-sublists .aside-pills {
+    display: inline;
+    margin-left: 0.3rem; }
 
 #left header, #left aside {
   overflow: hidden;

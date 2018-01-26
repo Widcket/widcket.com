@@ -431,7 +431,7 @@ a, a:link, a:visited, a:hover, a:active {
     text-transform: uppercase; }
   #right .project .project-story {
     font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
-    font-size: calc(8px + 0.8vmax); }
+    font-size: calc(8px + 0.7vmax); }
 
 #grid {
   max-height: 100vh;

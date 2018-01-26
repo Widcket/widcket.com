@@ -175,7 +175,7 @@ a, a:link, a:visited, a:hover, a:active {
 }
 
 #left {
-    margin-right: calc(#{$bezelWidth} / 2);
+    margin-right: #{$bezelWidth / 2};
 
     header {
         @include centerChildren;
@@ -249,7 +249,7 @@ a, a:link, a:visited, a:hover, a:active {
 }
 
 #right {
-    margin-left: calc(#{$bezelWidth} / 2);
+    margin-left: #{$bezelWidth / 2};
 
     .project {
         @include coverHeight;

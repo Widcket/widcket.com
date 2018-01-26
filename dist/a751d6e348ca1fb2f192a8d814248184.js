@@ -69,7 +69,7 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({7:[function(require,module,exports) {
+})({8:[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -100,7 +100,7 @@ function getBaseURL(url) {
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
 
-},{}],6:[function(require,module,exports) {
+},{}],7:[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -132,25 +132,25 @@ function reloadCSS() {
 
 module.exports = reloadCSS;
 
-},{"./bundle-url":7}],5:[function(require,module,exports) {
+},{"./bundle-url":8}],6:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":6}],4:[function(require,module,exports) {
+},{"_css_loader":7}],5:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":6}],3:[function(require,module,exports) {
+},{"_css_loader":7}],4:[function(require,module,exports) {
 'use strict';
 
 require('../node_modules/ress/ress.css');
 
 require('../sass/style.scss');
-},{"../node_modules/ress/ress.css":5,"../sass/style.scss":4}],48:[function(require,module,exports) {
+},{"../node_modules/ress/ress.css":6,"../sass/style.scss":5}],9:[function(require,module,exports) {
 
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
@@ -170,7 +170,7 @@ module.bundle.Module = Module;
 
 if (!module.bundle.parent && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
-  var ws = new WebSocket('ws://' + hostname + ':' + '62732' + '/');
+  var ws = new WebSocket('ws://' + hostname + ':' + '55148' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -271,5 +271,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id);
   });
 }
-},{}]},{},[48,3])
+},{}]},{},[9,4])
 //# sourceMappingURL=/dist/a751d6e348ca1fb2f192a8d814248184.map

@@ -150,7 +150,7 @@ module.exports = reloadCSS;
 require('../node_modules/ress/ress.css');
 
 require('../sass/style.scss');
-},{"../node_modules/ress/ress.css":5,"../sass/style.scss":4}],34:[function(require,module,exports) {
+},{"../node_modules/ress/ress.css":5,"../sass/style.scss":4}],37:[function(require,module,exports) {
 
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
@@ -271,5 +271,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id);
   });
 }
-},{}]},{},[34,3])
+},{}]},{},[37,3])
 //# sourceMappingURL=/dist/a751d6e348ca1fb2f192a8d814248184.map

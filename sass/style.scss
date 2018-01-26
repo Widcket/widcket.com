@@ -175,6 +175,7 @@ a, a:link, a:visited, a:hover, a:active {
         @include centerChildren;
 
         margin-top: -$bezelWidth; // Substract the bezel
+        margin-left: -$bezelWidth; // Substract the bezel
 
         #presentation {
             margin-top: -2.6vmax; // Substract the top offsets of the relative positioned children to avoid pushing everything down

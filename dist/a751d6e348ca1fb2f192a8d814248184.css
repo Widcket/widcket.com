@@ -445,7 +445,8 @@ a, a:link, a:visited, a:hover, a:active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: -2rem; }
+  margin-top: -2rem;
+  margin-left: -2rem; }
   #left header #presentation {
     margin-top: -2.6vmax; }
     #left header #presentation #greeting {

@@ -110,8 +110,7 @@ a, a:link, a:visited, a:hover, a:active {
 
         .aside-list {
             .aside-list-item {
-                @include primaryFontMedium;
-
+                font-family: $secondaryFont;
                 font-size: calc(10px + 0.5vmax);
                 line-height: calc(10px + 1vmax);
 

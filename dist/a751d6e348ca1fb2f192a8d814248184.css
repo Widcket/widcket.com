@@ -404,8 +404,7 @@ a, a:link, a:visited, a:hover, a:active {
     font-weight: 800;
     font-size: calc(12px + 0.3vmax); }
   #left aside .aside-list .aside-list-item {
-    font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
-    font-weight: 400;
+    font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
     font-size: calc(10px + 0.5vmax);
     line-height: calc(10px + 1vmax); }
     #left aside .aside-list .aside-list-item .aside-pill {

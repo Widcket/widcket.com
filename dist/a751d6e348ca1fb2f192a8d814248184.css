@@ -489,8 +489,11 @@ a, a:link, a:visited, a:hover, a:active {
   overflow: hidden;
   height: 100vh;
   justify-items: center;
-  align-items: center;
-  height: calc(100vh - 2rem); }
+  align-items: center; }
+  #right .project:first-child {
+    margin-top: -2rem; }
+  #right .project:last-child {
+    margin-bottom: 2rem; }
   #right .project .project-image {
     max-height: calc(100vh - 4rem);
     max-width: 20vmax; }

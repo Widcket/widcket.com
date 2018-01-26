@@ -242,7 +242,14 @@ a, a:link, a:visited, a:hover, a:active {
 
         justify-items: center;
         align-items: center;
-        height: calc(100vh - #{$bezelWidth});
+
+        &:first-child {
+            margin-top: -$bezelWidth; // Substract the bezel
+        }
+
+        &:last-child {
+            margin-bottom: $bezelWidth; // Substract the bezel
+        }
 
         .project-image {
             max-height: calc(100vh - #{$bezelWidth * 2});

@@ -444,7 +444,7 @@ a, a:link, a:visited, a:hover, a:active {
   overflow-y: auto; }
 
 #left {
-  margin-right: 1rem; }
+  margin-right: calc(2rem / 2); }
   #left header {
     display: flex;
     flex-direction: column;
@@ -489,7 +489,7 @@ a, a:link, a:visited, a:hover, a:active {
     height: 100vh; }
 
 #right {
-  margin-left: 1rem; }
+  margin-left: calc(2rem / 2); }
   #right .project {
     overflow: hidden;
     height: 100vh;

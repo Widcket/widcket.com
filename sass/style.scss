@@ -1,6 +1,15 @@
 @import "variables.scss";
 @import "mixins.scss";
 
+// TODO:
+// - Add more projects and polish existing ones
+// - Add icons, links, etc
+// - Add color scheme
+// - Add slide behaviour and scroll via JS (hide browser scrollbars)
+// - Add backgrounds
+// - Add parallax details and other scroll animations
+// - Add microinteractions
+
 // Custom resets
 
 a, a:link, a:visited, a:hover, a:active {
@@ -14,7 +23,16 @@ a, a:link, a:visited, a:hover, a:active {
     @include stretchGrid;
 
     grid-template-columns: 1fr 1fr;
-    grid-auto-flow: row; // TODO: Change this to column for mobile
+    grid-auto-flow: column;
+
+    @include for-small-size {
+        grid-template-columns: unset;
+        grid-auto-flow: row;
+    }
+
+    @include for-medium-size {
+        grid-template-columns: 0.5fr 1fr;
+    }
 }
 
 #left {
@@ -25,15 +43,23 @@ a, a:link, a:visited, a:hover, a:active {
             grid-template-rows: 1fr 1fr 1fr;
             grid-column-gap: $bezelWidth;
             grid-row-gap: 5vmax;
+
+            @include for-medium-size {
+                grid-template-columns: unset;
+            }
         }
     }
 
     #skills {
         .aside-sublists {
             display: grid;
-            grid-gap: 2vmax;
-            grid-template-columns: max-content max-content; // TODO: Disable this to row for mobile
+            grid-gap: 3vmax;
+            grid-template-columns: max-content max-content;
             grid-template-rows: min-content min-content;
+
+            @include for-medium-size {
+                grid-template-columns: unset;
+            }
 
             .aside-sublist {
                 display: grid;
@@ -48,9 +74,16 @@ a, a:link, a:visited, a:hover, a:active {
 #right {
     .project {
         display: grid;
-        grid-auto-columns: min-content 1fr; // TODO: Change this to row for mobile
-        grid-auto-flow: column; // TODO: Change this to row for mobile
+        grid-auto-columns: min-content 1fr;
+        grid-auto-flow: column;
         grid-gap: $bezelWidth;
+
+        @include for-small-size-portrait-only {
+            grid-auto-columns: unset;
+            grid-template-rows: 1fr min-content;
+            grid-auto-flow: row;
+            grid-gap: 0;
+        }
     }
 }
 
@@ -62,12 +95,28 @@ a, a:link, a:visited, a:hover, a:active {
             #greeting {
                 font-family: $accentFont;
                 font-size: calc(10px + 2vmax);
+
+                @include for-small-size {
+                    font-size: calc(10px + 3vmax);
+                }
+
+                @include for-medium-size {
+                    font-size: calc(10px + 1vmax);
+                }
             }
 
             #name {
                 @include primaryFontExtraBold;
 
                 font-size: calc(10px + 10.5vmax);
+
+                @include for-small-size {
+                    font-size: calc(10px + 15.5vmax);
+                }
+
+                @include for-medium-size {
+                    font-size: calc(10px + 8vmax);
+                }
             }
         }
 
@@ -78,6 +127,15 @@ a, a:link, a:visited, a:hover, a:active {
             letter-spacing: calc(1px + 0.12vmax);
             text-transform: uppercase;
             text-align: center;
+
+            @include for-small-size {
+                font-size: 2.45vmax;
+            }
+
+            @include for-medium-size {
+                font-size: 1.22vmax;
+                letter-spacing: calc(1px + 0.1vmax);
+            }
         }
 
         #profiles {
@@ -86,13 +144,15 @@ a, a:link, a:visited, a:hover, a:active {
 
                 font-size: calc(10px + 0.4vmax);
                 text-transform: lowercase;
+
+                @include for-medium-size {
+                    font-size: calc(10px + 0.1vmax);
+                }
             }
         }
     }
 
     aside {
-        padding-left: $bezelWidth;
-
         .aside-title {
             @include primaryFontExtraBold;
 
@@ -132,8 +192,6 @@ a, a:link, a:visited, a:hover, a:active {
 
 #right {
     .project {
-        padding-right: $bezelWidth;
-
         .project-title {
             @include primaryFontExtraBold;
 
@@ -161,21 +219,46 @@ a, a:link, a:visited, a:hover, a:active {
     position: fixed;
     overflow: hidden;
     padding: $bezelWidth;
+
+    @include for-small-size {
+        max-height: unset;
+        position: unset;
+        overflow: auto;
+    }
 }
 
 #left, #right {
     height: 100vh;
     overflow-y: auto;
+
+    @include for-small-size {
+        height: auto;
+        margin: 0;
+        overflow: auto;
+    }
 }
 
 #left {
     margin-right: #{$bezelWidth / 2};
+
+    @include for-small-size {
+        margin-right: 0;
+    }
 
     header {
         @include centerChildren;
 
         margin-top: -$bezelWidth; // Substract the bezel
         margin-left: -$bezelWidth; // Substract the bezel
+
+        @include for-small-size {
+            margin-left: 0;
+        }
+
+        @include for-small-size-portrait-only {
+            margin-top: 0;
+            margin-left: 0;
+        }
 
         #presentation {
             margin-top: -2.6vmax; // Substract the top offsets of the relative positioned children to avoid pushing everything down
@@ -184,19 +267,44 @@ a, a:link, a:visited, a:hover, a:active {
                 position: relative;
                 top: 2.6vmax;
                 left: -2vmax;
+
+                @include for-small-size {
+                    top: 3.7vmax;
+                }
+
+                @include for-medium-size {
+                    top: 2.3vmax;
+                    left: -1.5vmax;
+                }
             }
         }
 
         #tagline {
-            margin: 0.5vmax 0 2.8vmax 0;
+            margin: -0.5vmax 0 2vmax 0;
+
+            @include for-small-size {
+                margin: -0.7vmax 0 2.7vmax 0;
+            }
+
+            @include for-medium-size {
+                margin: -0.3vmax 0 1.6vmax 0;
+            }
         }
 
         #profiles {
             a {
                 display: inline-block;
                 margin-left: 1vmax;
-                padding: 0.55vmax 2vmax;
+                padding: 0.5vmax 2vmax;
                 border-radius: 9vmax;
+
+                @include for-small-size {
+                    padding: 0.8vmax 3vmax;
+                }
+
+                @include for-medium-size {
+                    margin-left: 0;
+                }
             }
 
             a:first-child {
@@ -206,6 +314,12 @@ a, a:link, a:visited, a:hover, a:active {
     }
 
     aside {
+        padding-left: $bezelWidth;
+
+        @include for-small-size-portrait-only {
+            padding-left: 0;
+        }
+
         .aside-title {
             position: relative;
             top: $bezelWidth;
@@ -245,11 +359,21 @@ a, a:link, a:visited, a:hover, a:active {
 #right {
     margin-left: #{$bezelWidth / 2};
 
+    @include for-small-size {
+        margin-left: 0;
+    }
+
     .project {
         @include coverHeight;
 
         justify-items: center;
         align-items: center;
+        padding-right: $bezelWidth;
+
+        @include for-small-size-portrait-only {
+            padding-right: 0;
+            padding-bottom: $bezelWidth;
+        }
 
         &:first-child {
             margin-top: -$bezelWidth; // Substract the bezel
@@ -257,11 +381,20 @@ a, a:link, a:visited, a:hover, a:active {
 
         &:last-child {
             margin-bottom: $bezelWidth; // Substract the bezel
+
+            @include for-small-size-portrait-only {
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
         }
 
         .project-image {
             max-height: calc(100vh - #{$bezelWidth * 2});
             max-width: 18vmax;
+
+            @include for-small-size-portrait-only {
+                max-width: 33vh;
+            }
         }
 
         .project-description {

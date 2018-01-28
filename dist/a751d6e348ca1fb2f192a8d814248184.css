@@ -341,7 +341,14 @@ a, a:link, a:visited, a:hover, a:active {
   display: grid;
   justify-items: stretch;
   grid-template-columns: 1fr 1fr;
-  grid-auto-flow: row; }
+  grid-auto-flow: column; }
+  @media (max-width: 749px) {
+    #grid {
+      grid-template-columns: unset;
+      grid-auto-flow: row; } }
+  @media (min-width: 750px) and (max-width: 899px) {
+    #grid {
+      grid-template-columns: 0.5fr 1fr; } }
 
 #left #competencies .aside-list {
   display: grid;
@@ -349,12 +356,18 @@ a, a:link, a:visited, a:hover, a:active {
   grid-template-rows: 1fr 1fr 1fr;
   grid-column-gap: 2rem;
   grid-row-gap: 5vmax; }
+  @media (min-width: 750px) and (max-width: 899px) {
+    #left #competencies .aside-list {
+      grid-template-columns: unset; } }
 
 #left #skills .aside-sublists {
   display: grid;
-  grid-gap: 2vmax;
+  grid-gap: 3vmax;
   grid-template-columns: max-content max-content;
   grid-template-rows: min-content min-content; }
+  @media (min-width: 750px) and (max-width: 899px) {
+    #left #skills .aside-sublists {
+      grid-template-columns: unset; } }
   #left #skills .aside-sublists .aside-sublist {
     display: grid;
     grid-template-columns: 1fr;
@@ -366,15 +379,33 @@ a, a:link, a:visited, a:hover, a:active {
   grid-auto-columns: min-content 1fr;
   grid-auto-flow: column;
   grid-gap: 2rem; }
+  @media (max-width: 749px) and (orientation: portrait) {
+    #right .project {
+      grid-auto-columns: unset;
+      grid-template-rows: 1fr min-content;
+      grid-auto-flow: row;
+      grid-gap: 0; } }
 
 #left header #presentation #greeting {
   font-family: "Nothing You Could Do", Georgia, Times, serif;
   font-size: calc(10px + 2vmax); }
+  @media (max-width: 749px) {
+    #left header #presentation #greeting {
+      font-size: calc(10px + 3vmax); } }
+  @media (min-width: 750px) and (max-width: 899px) {
+    #left header #presentation #greeting {
+      font-size: calc(10px + 1vmax); } }
 
 #left header #presentation #name {
   font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: 800;
   font-size: calc(10px + 10.5vmax); }
+  @media (max-width: 749px) {
+    #left header #presentation #name {
+      font-size: calc(10px + 15.5vmax); } }
+  @media (min-width: 750px) and (max-width: 899px) {
+    #left header #presentation #name {
+      font-size: calc(10px + 8vmax); } }
 
 #left header #tagline {
   font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -383,64 +414,88 @@ a, a:link, a:visited, a:hover, a:active {
   letter-spacing: calc(1px + 0.12vmax);
   text-transform: uppercase;
   text-align: center; }
+  @media (max-width: 749px) {
+    #left header #tagline {
+      font-size: 2.45vmax; } }
+  @media (min-width: 750px) and (max-width: 899px) {
+    #left header #tagline {
+      font-size: 1.22vmax;
+      letter-spacing: calc(1px + 0.1vmax); } }
 
 #left header #profiles a {
   font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: calc(10px + 0.4vmax);
   text-transform: lowercase; }
+  @media (min-width: 750px) and (max-width: 899px) {
+    #left header #profiles a {
+      font-size: calc(10px + 0.1vmax); } }
 
-#left aside {
-  padding-left: 2rem; }
-  #left aside .aside-title {
-    font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
-    font-weight: 800;
-    font-size: calc(14px + 0.1vmax);
-    letter-spacing: calc(2px + 0.01vmax);
+#left aside .aside-title {
+  font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: calc(14px + 0.1vmax);
+  letter-spacing: calc(2px + 0.01vmax);
+  text-transform: uppercase; }
+
+#left aside .aside-subtitle {
+  font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: calc(12px + 0.3vmax); }
+
+#left aside .aside-list .aside-list-item {
+  font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: calc(10px + 0.5vmax);
+  line-height: calc(10px + 1vmax); }
+  #left aside .aside-list .aside-list-item .aside-pill {
+    font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: calc(8px + 0.2vmax);
     text-transform: uppercase; }
-  #left aside .aside-subtitle {
-    font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
-    font-weight: 800;
-    font-size: calc(12px + 0.3vmax); }
-  #left aside .aside-list .aside-list-item {
-    font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
-    font-size: calc(10px + 0.5vmax);
-    line-height: calc(10px + 1vmax); }
-    #left aside .aside-list .aside-list-item .aside-pill {
-      font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
-      font-size: calc(8px + 0.2vmax);
-      text-transform: uppercase; }
-  #left aside .aside-sublist .aside-list-item {
-    font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
-    font-size: calc(10px + 0.4vmax); }
 
-#right .project {
-  padding-right: 2rem; }
-  #right .project .project-title {
-    font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
-    font-weight: 800;
-    font-size: calc(14px + 0.6vmax); }
-  #right .project .project-description {
-    font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
-    font-weight: 400;
-    font-size: calc(8px + 0.5vmax);
-    line-height: calc(8px + 0.6vmax); }
-  #right .project .project-story {
-    font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
-    font-size: calc(8px + 0.7vmax); }
+#left aside .aside-sublist .aside-list-item {
+  font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: calc(10px + 0.4vmax); }
+
+#right .project .project-title {
+  font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: calc(14px + 0.6vmax); }
+
+#right .project .project-description {
+  font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: calc(8px + 0.5vmax);
+  line-height: calc(8px + 0.6vmax); }
+
+#right .project .project-story {
+  font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: calc(8px + 0.7vmax); }
 
 #grid {
   max-height: 100vh;
   position: fixed;
   overflow: hidden;
   padding: 2rem; }
+  @media (max-width: 749px) {
+    #grid {
+      max-height: unset;
+      position: unset;
+      overflow: auto; } }
 
 #left, #right {
   height: 100vh;
   overflow-y: auto; }
+  @media (max-width: 749px) {
+    #left, #right {
+      height: auto;
+      margin: 0;
+      overflow: auto; } }
 
 #left {
   margin-right: 1rem; }
+  @media (max-width: 749px) {
+    #left {
+      margin-right: 0; } }
   #left header {
     display: flex;
     flex-direction: column;
@@ -448,56 +503,102 @@ a, a:link, a:visited, a:hover, a:active {
     align-items: center;
     margin-top: -2rem;
     margin-left: -2rem; }
+    @media (max-width: 749px) {
+      #left header {
+        margin-left: 0; } }
+    @media (max-width: 749px) and (orientation: portrait) {
+      #left header {
+        margin-top: 0;
+        margin-left: 0; } }
     #left header #presentation {
       margin-top: -2.6vmax; }
       #left header #presentation #greeting {
         position: relative;
         top: 2.6vmax;
         left: -2vmax; }
+        @media (max-width: 749px) {
+          #left header #presentation #greeting {
+            top: 3.7vmax; } }
+        @media (min-width: 750px) and (max-width: 899px) {
+          #left header #presentation #greeting {
+            top: 2.3vmax;
+            left: -1.5vmax; } }
     #left header #tagline {
-      margin: 0.5vmax 0 2.8vmax 0; }
+      margin: -0.5vmax 0 2vmax 0; }
+      @media (max-width: 749px) {
+        #left header #tagline {
+          margin: -0.7vmax 0 2.7vmax 0; } }
+      @media (min-width: 750px) and (max-width: 899px) {
+        #left header #tagline {
+          margin: -0.3vmax 0 1.6vmax 0; } }
     #left header #profiles a {
       display: inline-block;
       margin-left: 1vmax;
-      padding: 0.55vmax 2vmax;
+      padding: 0.5vmax 2vmax;
       border-radius: 9vmax; }
+      @media (max-width: 749px) {
+        #left header #profiles a {
+          padding: 0.8vmax 3vmax; } }
+      @media (min-width: 750px) and (max-width: 899px) {
+        #left header #profiles a {
+          margin-left: 0; } }
     #left header #profiles a:first-child {
       margin-left: 0; }
-  #left aside .aside-title {
-    position: relative;
-    top: 2rem; }
-  #left aside .aside-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: calc(100vh - 2rem); }
-  #left aside#competencies .aside-list {
-    margin-top: 0; }
-  #left aside .aside-list, #left aside .aside-sublists {
-    margin-top: 4%; }
-  #left aside .aside-sublists {
-    margin-top: 0; }
-    #left aside .aside-sublists .aside-pills {
-      display: inline;
-      margin-left: 0.3rem; }
+  #left aside {
+    padding-left: 2rem; }
+    @media (max-width: 749px) and (orientation: portrait) {
+      #left aside {
+        padding-left: 0; } }
+    #left aside .aside-title {
+      position: relative;
+      top: 2rem; }
+    #left aside .aside-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: calc(100vh - 2rem); }
+    #left aside#competencies .aside-list {
+      margin-top: 0; }
+    #left aside .aside-list, #left aside .aside-sublists {
+      margin-top: 4%; }
+    #left aside .aside-sublists {
+      margin-top: 0; }
+      #left aside .aside-sublists .aside-pills {
+        display: inline;
+        margin-left: 0.3rem; }
   #left header, #left aside {
     overflow: hidden;
     height: 100vh; }
 
 #right {
   margin-left: 1rem; }
+  @media (max-width: 749px) {
+    #right {
+      margin-left: 0; } }
   #right .project {
     overflow: hidden;
     height: 100vh;
     justify-items: center;
-    align-items: center; }
+    align-items: center;
+    padding-right: 2rem; }
+    @media (max-width: 749px) and (orientation: portrait) {
+      #right .project {
+        padding-right: 0;
+        padding-bottom: 2rem; } }
     #right .project:first-child {
       margin-top: -2rem; }
     #right .project:last-child {
       margin-bottom: 2rem; }
+      @media (max-width: 749px) and (orientation: portrait) {
+        #right .project:last-child {
+          margin-bottom: 0;
+          padding-bottom: 0; } }
     #right .project .project-image {
       max-height: calc(100vh - 4rem);
       max-width: 18vmax; }
+      @media (max-width: 749px) and (orientation: portrait) {
+        #right .project .project-image {
+          max-width: 33vh; } }
     #right .project .project-description {
       margin-top: 0.7rem; }
     #right .project .project-story {

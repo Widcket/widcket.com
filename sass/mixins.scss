@@ -60,3 +60,9 @@
         @content;
     }
 }
+
+@mixin for-medium-size-portrait-only {
+    @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
+        @content;
+    }
+}

@@ -349,6 +349,10 @@ a, a:link, a:visited, a:hover, a:active {
   @media (min-width: 750px) and (max-width: 899px) {
     #grid {
       grid-template-columns: 0.5fr 1fr; } }
+  @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
+    #grid {
+      grid-template-columns: unset;
+      grid-auto-flow: row; } }
 
 #left #competencies .aside-list {
   display: grid;
@@ -359,6 +363,9 @@ a, a:link, a:visited, a:hover, a:active {
   @media (min-width: 750px) and (max-width: 899px) {
     #left #competencies .aside-list {
       grid-template-columns: unset; } }
+  @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
+    #left #competencies .aside-list {
+      grid-template-columns: max-content max-content; } }
 
 #left #skills .aside-sublists {
   display: grid;
@@ -376,6 +383,9 @@ a, a:link, a:visited, a:hover, a:active {
   @media (min-width: 750px) and (max-width: 899px) {
     #left #skills .aside-sublists {
       grid-template-columns: unset; } }
+  @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
+    #left #skills .aside-sublists {
+      grid-template-columns: max-content max-content; } }
   #left #skills .aside-sublists .aside-sublist {
     display: grid;
     grid-template-columns: 1fr;
@@ -397,6 +407,12 @@ a, a:link, a:visited, a:hover, a:active {
       grid-template-rows: 1fr min-content;
       grid-auto-flow: row;
       grid-gap: 1rem; } }
+  @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
+    #right .project {
+      grid-auto-columns: unset;
+      grid-template-rows: 1fr min-content;
+      grid-auto-flow: row;
+      grid-gap: 1rem; } }
 
 #left header #presentation #greeting {
   font-family: "Nothing You Could Do", Georgia, Times, serif;
@@ -407,6 +423,9 @@ a, a:link, a:visited, a:hover, a:active {
   @media (min-width: 750px) and (max-width: 899px) {
     #left header #presentation #greeting {
       font-size: calc(10px + 1vmax); } }
+  @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
+    #left header #presentation #greeting {
+      font-size: calc(10px + 3vmax); } }
 
 #left header #presentation #name {
   font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -418,6 +437,9 @@ a, a:link, a:visited, a:hover, a:active {
   @media (min-width: 750px) and (max-width: 899px) {
     #left header #presentation #name {
       font-size: calc(10px + 8vmax); } }
+  @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
+    #left header #presentation #name {
+      font-size: calc(10px + 15.5vmax); } }
 
 #left header #tagline {
   font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -433,6 +455,10 @@ a, a:link, a:visited, a:hover, a:active {
     #left header #tagline {
       font-size: 1.22vmax;
       letter-spacing: calc(1px + 0.1vmax); } }
+  @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
+    #left header #tagline {
+      font-size: 2.45vmax;
+      letter-spacing: calc(1px + 0.12vmax); } }
 
 #left header #profiles a {
   font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -442,6 +468,9 @@ a, a:link, a:visited, a:hover, a:active {
   @media (min-width: 750px) and (max-width: 899px) {
     #left header #profiles a {
       font-size: calc(10px + 0.1vmax); } }
+  @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
+    #left header #profiles a {
+      font-size: calc(10px + 0.4vmax); } }
 
 #left aside .aside-title {
   font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -475,6 +504,9 @@ a, a:link, a:visited, a:hover, a:active {
   @media (max-width: 749px) and (orientation: landscape) {
     #right .project .project-title {
       font-size: calc(14px + 1vmax); } }
+  @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
+    #right .project .project-title {
+      font-size: calc(14px + 1vmax); } }
 
 #right .project .project-description {
   font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -485,11 +517,18 @@ a, a:link, a:visited, a:hover, a:active {
     #right .project .project-description {
       font-size: calc(8px + 0.9vmax);
       line-height: calc(8px + 1.1vmax); } }
+  @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
+    #right .project .project-description {
+      font-size: calc(8px + 0.9vmax);
+      line-height: calc(8px + 1.1vmax); } }
 
 #right .project .project-story {
   font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: calc(8px + 0.7vmax); }
   @media (max-width: 749px) and (orientation: landscape) {
+    #right .project .project-story {
+      font-size: calc(8px + 1.2vmax); } }
+  @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
     #right .project .project-story {
       font-size: calc(8px + 1.2vmax); } }
 
@@ -498,6 +537,11 @@ a, a:link, a:visited, a:hover, a:active {
   position: fixed;
   overflow: hidden; }
   @media (max-width: 749px) {
+    #grid {
+      max-height: unset;
+      position: unset;
+      overflow: auto; } }
+  @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
     #grid {
       max-height: unset;
       position: unset;
@@ -511,11 +555,20 @@ a, a:link, a:visited, a:hover, a:active {
       height: auto;
       margin: 0;
       overflow: auto; } }
+  @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
+    #left, #right {
+      height: auto;
+      margin: 0;
+      overflow: auto; } }
 
 #left {
   margin-right: 1rem;
   padding-left: 2rem; }
   @media (max-width: 749px) {
+    #left {
+      margin-right: 0;
+      padding-right: 2rem; } }
+  @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
     #left {
       margin-right: 0;
       padding-right: 2rem; } }
@@ -525,6 +578,10 @@ a, a:link, a:visited, a:hover, a:active {
     justify-content: center;
     align-items: center; }
     @media (max-width: 749px) {
+      #left header {
+        margin-top: 0;
+        margin-left: 0; } }
+    @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
       #left header {
         margin-top: 0;
         margin-left: 0; } }
@@ -541,6 +598,10 @@ a, a:link, a:visited, a:hover, a:active {
           #left header #presentation #greeting {
             top: 2.3vmax;
             left: -1.5vmax; } }
+        @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
+          #left header #presentation #greeting {
+            top: 3.7vmax;
+            left: -2vmax; } }
     #left header #tagline {
       margin: -0.5vmax 0 2vmax 0; }
       @media (max-width: 749px) {
@@ -549,6 +610,9 @@ a, a:link, a:visited, a:hover, a:active {
       @media (min-width: 750px) and (max-width: 899px) {
         #left header #tagline {
           margin: -0.3vmax 0 1.6vmax 0; } }
+      @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
+        #left header #tagline {
+          margin: -0.7vmax 0 2.7vmax 0; } }
     #left header #profiles a {
       display: inline-block;
       margin-left: 1vmax;
@@ -560,6 +624,10 @@ a, a:link, a:visited, a:hover, a:active {
       @media (min-width: 750px) and (max-width: 899px) {
         #left header #profiles a {
           margin-left: 0; } }
+      @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
+        #left header #profiles a {
+          margin-left: 1vmax;
+          padding: 0.8vmax 3vmax; } }
     #left header #profiles a:first-child {
       margin-left: 0; }
   #left aside .aside-title {
@@ -590,6 +658,10 @@ a, a:link, a:visited, a:hover, a:active {
     #right {
       margin-left: 0;
       padding-left: 2rem; } }
+  @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
+    #right {
+      margin-left: 0;
+      padding-left: 2rem; } }
   #right .project {
     overflow: hidden;
     height: 100vh;
@@ -601,10 +673,16 @@ a, a:link, a:visited, a:hover, a:active {
     @media (max-width: 749px) and (orientation: portrait) {
       #right .project {
         padding-bottom: 2rem; } }
+    @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
+      #right .project {
+        padding-bottom: 2rem; } }
     #right .project .project-image {
       max-height: calc(100vh - 4rem);
       max-width: 18vmax; }
       @media (max-width: 749px) and (orientation: portrait) {
+        #right .project .project-image {
+          max-width: calc(34vh - 2rem); } }
+      @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
         #right .project .project-image {
           max-width: calc(34vh - 2rem); } }
     #right .project .project-description {

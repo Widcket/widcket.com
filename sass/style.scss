@@ -33,6 +33,11 @@ a, a:link, a:visited, a:hover, a:active {
     @include for-medium-size {
         grid-template-columns: 0.5fr 1fr;
     }
+
+    @include for-medium-size-portrait-only {
+        grid-template-columns: unset;
+        grid-auto-flow: row;
+    }
 }
 
 #left {
@@ -46,6 +51,10 @@ a, a:link, a:visited, a:hover, a:active {
 
             @include for-medium-size {
                 grid-template-columns: unset;
+            }
+
+            @include for-medium-size-portrait-only {
+                grid-template-columns: max-content max-content;
             }
         }
     }
@@ -69,6 +78,10 @@ a, a:link, a:visited, a:hover, a:active {
 
             @include for-medium-size {
                 grid-template-columns: unset;
+            }
+
+            @include for-medium-size-portrait-only {
+                grid-template-columns: max-content max-content;
             }
 
             .aside-sublist {
@@ -101,6 +114,13 @@ a, a:link, a:visited, a:hover, a:active {
             grid-auto-flow: row;
             grid-gap: 1rem;
         }
+
+        @include for-medium-size-portrait-only {
+            grid-auto-columns: unset;
+            grid-template-rows: 1fr min-content;
+            grid-auto-flow: row;
+            grid-gap: 1rem;
+        }
     }
 }
 
@@ -120,6 +140,10 @@ a, a:link, a:visited, a:hover, a:active {
                 @include for-medium-size {
                     font-size: calc(10px + 1vmax);
                 }
+
+                @include for-medium-size-portrait-only {
+                    font-size: calc(10px + 3vmax);
+                }
             }
 
             #name {
@@ -133,6 +157,10 @@ a, a:link, a:visited, a:hover, a:active {
 
                 @include for-medium-size {
                     font-size: calc(10px + 8vmax);
+                }
+
+                @include for-medium-size-portrait-only {
+                    font-size: calc(10px + 15.5vmax);
                 }
             }
         }
@@ -153,6 +181,11 @@ a, a:link, a:visited, a:hover, a:active {
                 font-size: 1.22vmax;
                 letter-spacing: calc(1px + 0.1vmax);
             }
+
+            @include for-medium-size-portrait-only {
+                font-size: 2.45vmax;
+                letter-spacing: calc(1px + 0.12vmax);
+            }
         }
 
         #profiles {
@@ -164,6 +197,10 @@ a, a:link, a:visited, a:hover, a:active {
 
                 @include for-medium-size {
                     font-size: calc(10px + 0.1vmax);
+                }
+
+                @include for-medium-size-portrait-only {
+                    font-size: calc(10px + 0.4vmax);
                 }
             }
         }
@@ -217,6 +254,10 @@ a, a:link, a:visited, a:hover, a:active {
             @include for-small-size-landscape-only {
                 font-size: calc(14px + 1vmax);
             }
+
+            @include for-medium-size-portrait-only {
+                font-size: calc(14px + 1vmax);
+            }
         }
 
         .project-description {
@@ -229,6 +270,11 @@ a, a:link, a:visited, a:hover, a:active {
                 font-size: calc(8px + 0.9vmax);
                 line-height: calc(8px + 1.1vmax);
             }
+
+            @include for-medium-size-portrait-only {
+                font-size: calc(8px + 0.9vmax);
+                line-height: calc(8px + 1.1vmax);
+            }
         }
 
         .project-story {
@@ -236,6 +282,10 @@ a, a:link, a:visited, a:hover, a:active {
             font-size: calc(8px + 0.7vmax);
 
             @include for-small-size-landscape-only {
+                font-size: calc(8px + 1.2vmax);
+            }
+
+            @include for-medium-size-portrait-only {
                 font-size: calc(8px + 1.2vmax);
             }
         }
@@ -254,6 +304,12 @@ a, a:link, a:visited, a:hover, a:active {
         position: unset;
         overflow: auto;
     }
+
+    @include for-medium-size-portrait-only {
+        max-height: unset;
+        position: unset;
+        overflow: auto;
+    }
 }
 
 #left, #right {
@@ -261,6 +317,12 @@ a, a:link, a:visited, a:hover, a:active {
     overflow-y: auto;
 
     @include for-small-size {
+        height: auto;
+        margin: 0;
+        overflow: auto;
+    }
+
+    @include for-medium-size-portrait-only {
         height: auto;
         margin: 0;
         overflow: auto;
@@ -276,10 +338,20 @@ a, a:link, a:visited, a:hover, a:active {
         padding-right: $spaceUnit;
     }
 
+    @include for-medium-size-portrait-only {
+        margin-right: 0;
+        padding-right: $spaceUnit;
+    }
+
     header {
         @include centerChildren;
 
         @include for-small-size {
+            margin-top: 0;
+            margin-left: 0;
+        }
+
+        @include for-medium-size-portrait-only {
             margin-top: 0;
             margin-left: 0;
         }
@@ -300,6 +372,11 @@ a, a:link, a:visited, a:hover, a:active {
                     top: 2.3vmax;
                     left: -1.5vmax;
                 }
+
+                @include for-medium-size-portrait-only {
+                    top: 3.7vmax;
+                    left: -2vmax;
+                }
             }
         }
 
@@ -312,6 +389,10 @@ a, a:link, a:visited, a:hover, a:active {
 
             @include for-medium-size {
                 margin: -0.3vmax 0 1.6vmax 0;
+            }
+
+            @include for-medium-size-portrait-only {
+                margin: -0.7vmax 0 2.7vmax 0;
             }
         }
 
@@ -328,6 +409,11 @@ a, a:link, a:visited, a:hover, a:active {
 
                 @include for-medium-size {
                     margin-left: 0;
+                }
+
+                @include for-medium-size-portrait-only {
+                    margin-left: 1vmax;
+                    padding: 0.8vmax 3vmax;
                 }
             }
 
@@ -383,6 +469,11 @@ a, a:link, a:visited, a:hover, a:active {
         padding-left: $spaceUnit;
     }
 
+    @include for-medium-size-portrait-only {
+        margin-left: 0;
+        padding-left: $spaceUnit;
+    }
+
     .project {
         @include coverHeight;
 
@@ -397,11 +488,19 @@ a, a:link, a:visited, a:hover, a:active {
             padding-bottom: $spaceUnit;
         }
 
+        @include for-medium-size-portrait-only {
+            padding-bottom: $spaceUnit;
+        }
+
         .project-image {
             max-height: calc(100vh - #{$spaceUnit * 2});
             max-width: 18vmax;
 
             @include for-small-size-portrait-only {
+                max-width: calc(34vh - 2rem);
+            }
+
+            @include for-medium-size-portrait-only {
                 max-width: calc(34vh - 2rem);
             }
         }

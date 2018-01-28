@@ -346,7 +346,7 @@ a, a:link, a:visited, a:hover, a:active {
     #grid {
       grid-template-columns: unset;
       grid-auto-flow: row; } }
-  @media (min-width: 750px) and (max-width: 899px) {
+  @media (min-width: 750px) and (max-width: 899px) and (orientation: landscape) {
     #grid {
       grid-template-columns: 0.5fr 1fr; } }
   @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
@@ -360,12 +360,9 @@ a, a:link, a:visited, a:hover, a:active {
   grid-template-rows: 1fr 1fr 1fr;
   grid-column-gap: 2rem;
   grid-row-gap: 5vmax; }
-  @media (min-width: 750px) and (max-width: 899px) {
+  @media (min-width: 750px) and (max-width: 899px) and (orientation: landscape) {
     #left #competencies .aside-list {
       grid-template-columns: unset; } }
-  @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
-    #left #competencies .aside-list {
-      grid-template-columns: max-content max-content; } }
 
 #left #skills .aside-sublists {
   display: grid;
@@ -380,12 +377,9 @@ a, a:link, a:visited, a:hover, a:active {
       grid-column-gap: 3vmax;
       grid-row-gap: 0;
       grid-template-columns: max-content max-content 1fr; } }
-  @media (min-width: 750px) and (max-width: 899px) {
+  @media (min-width: 750px) and (max-width: 899px) and (orientation: landscape) {
     #left #skills .aside-sublists {
       grid-template-columns: unset; } }
-  @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
-    #left #skills .aside-sublists {
-      grid-template-columns: max-content max-content; } }
   #left #skills .aside-sublists .aside-sublist {
     display: grid;
     grid-template-columns: 1fr;
@@ -420,12 +414,9 @@ a, a:link, a:visited, a:hover, a:active {
   @media (max-width: 749px) {
     #left header #presentation #greeting {
       font-size: calc(10px + 3vmax); } }
-  @media (min-width: 750px) and (max-width: 899px) {
+  @media (min-width: 750px) and (max-width: 899px) and (orientation: landscape) {
     #left header #presentation #greeting {
       font-size: calc(10px + 1vmax); } }
-  @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
-    #left header #presentation #greeting {
-      font-size: calc(10px + 3vmax); } }
 
 #left header #presentation #name {
   font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -434,12 +425,9 @@ a, a:link, a:visited, a:hover, a:active {
   @media (max-width: 749px) {
     #left header #presentation #name {
       font-size: calc(10px + 15.5vmax); } }
-  @media (min-width: 750px) and (max-width: 899px) {
+  @media (min-width: 750px) and (max-width: 899px) and (orientation: landscape) {
     #left header #presentation #name {
       font-size: calc(10px + 8vmax); } }
-  @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
-    #left header #presentation #name {
-      font-size: calc(10px + 15.5vmax); } }
 
 #left header #tagline {
   font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -451,26 +439,19 @@ a, a:link, a:visited, a:hover, a:active {
   @media (max-width: 749px) {
     #left header #tagline {
       font-size: 2.45vmax; } }
-  @media (min-width: 750px) and (max-width: 899px) {
+  @media (min-width: 750px) and (max-width: 899px) and (orientation: landscape) {
     #left header #tagline {
       font-size: 1.22vmax;
       letter-spacing: calc(1px + 0.1vmax); } }
-  @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
-    #left header #tagline {
-      font-size: 2.45vmax;
-      letter-spacing: calc(1px + 0.12vmax); } }
 
 #left header #profiles a {
   font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: calc(10px + 0.4vmax);
   text-transform: lowercase; }
-  @media (min-width: 750px) and (max-width: 899px) {
+  @media (min-width: 750px) and (max-width: 899px) and (orientation: landscape) {
     #left header #profiles a {
       font-size: calc(10px + 0.1vmax); } }
-  @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
-    #left header #profiles a {
-      font-size: calc(10px + 0.4vmax); } }
 
 #left aside .aside-title {
   font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -594,25 +575,18 @@ a, a:link, a:visited, a:hover, a:active {
         @media (max-width: 749px) {
           #left header #presentation #greeting {
             top: 3.7vmax; } }
-        @media (min-width: 750px) and (max-width: 899px) {
+        @media (min-width: 750px) and (max-width: 899px) and (orientation: landscape) {
           #left header #presentation #greeting {
             top: 2.3vmax;
             left: -1.5vmax; } }
-        @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
-          #left header #presentation #greeting {
-            top: 3.7vmax;
-            left: -2vmax; } }
     #left header #tagline {
       margin: -0.5vmax 0 2vmax 0; }
       @media (max-width: 749px) {
         #left header #tagline {
           margin: -0.7vmax 0 2.7vmax 0; } }
-      @media (min-width: 750px) and (max-width: 899px) {
+      @media (min-width: 750px) and (max-width: 899px) and (orientation: landscape) {
         #left header #tagline {
           margin: -0.3vmax 0 1.6vmax 0; } }
-      @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
-        #left header #tagline {
-          margin: -0.7vmax 0 2.7vmax 0; } }
     #left header #profiles a {
       display: inline-block;
       margin-left: 1vmax;
@@ -621,13 +595,9 @@ a, a:link, a:visited, a:hover, a:active {
       @media (max-width: 749px) {
         #left header #profiles a {
           padding: 0.8vmax 3vmax; } }
-      @media (min-width: 750px) and (max-width: 899px) {
+      @media (min-width: 750px) and (max-width: 899px) and (orientation: landscape) {
         #left header #profiles a {
           margin-left: 0; } }
-      @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
-        #left header #profiles a {
-          margin-left: 1vmax;
-          padding: 0.8vmax 3vmax; } }
     #left header #profiles a:first-child {
       margin-left: 0; }
   #left aside .aside-title {

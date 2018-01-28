@@ -30,7 +30,7 @@ a, a:link, a:visited, a:hover, a:active {
         grid-auto-flow: row;
     }
 
-    @include for-medium-size {
+    @include for-medium-size-landscape-only {
         grid-template-columns: 0.5fr 1fr;
     }
 
@@ -49,12 +49,8 @@ a, a:link, a:visited, a:hover, a:active {
             grid-column-gap: $spaceUnit;
             grid-row-gap: 5vmax;
 
-            @include for-medium-size {
+            @include for-medium-size-landscape-only {
                 grid-template-columns: unset;
-            }
-
-            @include for-medium-size-portrait-only {
-                grid-template-columns: max-content max-content;
             }
         }
     }
@@ -76,12 +72,8 @@ a, a:link, a:visited, a:hover, a:active {
                 grid-template-columns: max-content max-content 1fr;
             }
 
-            @include for-medium-size {
+            @include for-medium-size-landscape-only {
                 grid-template-columns: unset;
-            }
-
-            @include for-medium-size-portrait-only {
-                grid-template-columns: max-content max-content;
             }
 
             .aside-sublist {
@@ -137,12 +129,8 @@ a, a:link, a:visited, a:hover, a:active {
                     font-size: calc(10px + 3vmax);
                 }
 
-                @include for-medium-size {
+                @include for-medium-size-landscape-only {
                     font-size: calc(10px + 1vmax);
-                }
-
-                @include for-medium-size-portrait-only {
-                    font-size: calc(10px + 3vmax);
                 }
             }
 
@@ -155,12 +143,8 @@ a, a:link, a:visited, a:hover, a:active {
                     font-size: calc(10px + 15.5vmax);
                 }
 
-                @include for-medium-size {
+                @include for-medium-size-landscape-only {
                     font-size: calc(10px + 8vmax);
-                }
-
-                @include for-medium-size-portrait-only {
-                    font-size: calc(10px + 15.5vmax);
                 }
             }
         }
@@ -177,14 +161,9 @@ a, a:link, a:visited, a:hover, a:active {
                 font-size: 2.45vmax;
             }
 
-            @include for-medium-size {
+            @include for-medium-size-landscape-only {
                 font-size: 1.22vmax;
                 letter-spacing: calc(1px + 0.1vmax);
-            }
-
-            @include for-medium-size-portrait-only {
-                font-size: 2.45vmax;
-                letter-spacing: calc(1px + 0.12vmax);
             }
         }
 
@@ -195,12 +174,8 @@ a, a:link, a:visited, a:hover, a:active {
                 font-size: calc(10px + 0.4vmax);
                 text-transform: lowercase;
 
-                @include for-medium-size {
+                @include for-medium-size-landscape-only {
                     font-size: calc(10px + 0.1vmax);
-                }
-
-                @include for-medium-size-portrait-only {
-                    font-size: calc(10px + 0.4vmax);
                 }
             }
         }
@@ -368,14 +343,9 @@ a, a:link, a:visited, a:hover, a:active {
                     top: 3.7vmax;
                 }
 
-                @include for-medium-size {
+                @include for-medium-size-landscape-only {
                     top: 2.3vmax;
                     left: -1.5vmax;
-                }
-
-                @include for-medium-size-portrait-only {
-                    top: 3.7vmax;
-                    left: -2vmax;
                 }
             }
         }
@@ -387,12 +357,8 @@ a, a:link, a:visited, a:hover, a:active {
                 margin: -0.7vmax 0 2.7vmax 0;
             }
 
-            @include for-medium-size {
+            @include for-medium-size-landscape-only {
                 margin: -0.3vmax 0 1.6vmax 0;
-            }
-
-            @include for-medium-size-portrait-only {
-                margin: -0.7vmax 0 2.7vmax 0;
             }
         }
 
@@ -407,13 +373,8 @@ a, a:link, a:visited, a:hover, a:active {
                     padding: 0.8vmax 3vmax;
                 }
 
-                @include for-medium-size {
+                @include for-medium-size-landscape-only {
                     margin-left: 0;
-                }
-
-                @include for-medium-size-portrait-only {
-                    margin-left: 1vmax;
-                    padding: 0.8vmax 3vmax;
                 }
             }
 

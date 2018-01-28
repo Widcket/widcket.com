@@ -200,6 +200,10 @@ a, a:link, a:visited, a:hover, a:active {
             @include primaryFontExtraBold;
 
             font-size: calc(14px + 0.6vmax);
+
+            @include for-small-size-landscape-only {
+                font-size: calc(14px + 1vmax);
+            }
         }
 
         .project-description {
@@ -207,11 +211,20 @@ a, a:link, a:visited, a:hover, a:active {
 
             font-size: calc(8px + 0.5vmax);
             line-height: calc(8px + 0.6vmax);
+
+            @include ffor-small-size-landscape-only {
+                font-size: calc(8px + 0.9vmax);
+                line-height: calc(8px + 1.1vmax);
+            }
         }
 
         .project-story {
             font-family: $secondaryFont;
             font-size: calc(8px + 0.7vmax);
+
+            @include for-small-size-landscape-only {
+                font-size: calc(8px + 1.2vmax);
+            }
         }
     }
 }

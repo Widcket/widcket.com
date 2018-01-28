@@ -22,6 +22,36 @@
     align-items: center;
 }
 
+@mixin leftSlideMargins {
+    margin-right: #{$spaceUnit / 2};
+    padding-left: $spaceUnit;
+
+    @include for-small-size {
+        margin-right: 0;
+        padding-right: $spaceUnit;
+    }
+
+    @include for-medium-size-portrait-only {
+        margin-right: 0;
+        padding-right: $spaceUnit;
+    }
+}
+
+@mixin rightSlideMargins {
+    margin-left: #{$spaceUnit / 2};
+    padding-right: $spaceUnit;
+
+    @include for-small-size {
+        margin-left: 0;
+        padding-left: $spaceUnit;
+    }
+
+    @include for-medium-size-portrait-only {
+        margin-left: 0;
+        padding-left: $spaceUnit;
+    }
+}
+
 @mixin primaryFontLight {
     font-family: $primaryFont;
     font-weight: 400;

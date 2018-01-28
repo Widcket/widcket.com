@@ -73,6 +73,7 @@ a, a:link, a:visited, a:hover, a:active {
             }
 
             @include for-medium-size-landscape-only {
+                grid-gap: 2vmax;
                 grid-template-columns: unset;
             }
 
@@ -305,30 +306,25 @@ a, a:link, a:visited, a:hover, a:active {
 }
 
 #left {
-    margin-right: #{$spaceUnit / 2};
-    padding-left: $spaceUnit;
-
-    @include for-small-size {
-        margin-right: 0;
-        padding-right: $spaceUnit;
-    }
-
-    @include for-medium-size-portrait-only {
-        margin-right: 0;
-        padding-right: $spaceUnit;
+    & > * {
+        @include leftSlideMargins;
     }
 
     header {
         @include centerChildren;
 
+        padding-right: $spaceUnit / 2;
+
         @include for-small-size {
             margin-top: 0;
             margin-left: 0;
+            padding-right: $spaceUnit;
         }
 
         @include for-medium-size-portrait-only {
             margin-top: 0;
             margin-left: 0;
+            padding-right: $spaceUnit;
         }
 
         #presentation {
@@ -422,28 +418,12 @@ a, a:link, a:visited, a:hover, a:active {
 }
 
 #right {
-    margin-left: #{$spaceUnit / 2};
-    padding-right: $spaceUnit;
-
-    @include for-small-size {
-        margin-left: 0;
-        padding-left: $spaceUnit;
-    }
-
-    @include for-medium-size-portrait-only {
-        margin-left: 0;
-        padding-left: $spaceUnit;
-    }
-
     .project {
+        @include rightSlideMargins;
         @include coverHeight;
 
         justify-items: center;
         align-items: center;
-
-        @include for-small-size {
-            padding-right: 0;
-        }
 
         @include for-small-size-portrait-only {
             padding-bottom: $spaceUnit;

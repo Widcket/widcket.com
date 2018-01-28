@@ -61,6 +61,12 @@ a, a:link, a:visited, a:hover, a:active {
                 grid-template-columns: unset;
             }
 
+            @include for-small-size-landscape-only {
+                grid-column-gap: 3vmax;
+                grid-row-gap: 0;
+                grid-template-columns: max-content max-content 1fr;
+            }
+
             @include for-medium-size {
                 grid-template-columns: unset;
             }
@@ -70,6 +76,13 @@ a, a:link, a:visited, a:hover, a:active {
                 grid-template-columns: 1fr;
                 grid-template-rows: min-content 1fr;
                 grid-gap: 5%;
+
+                &:last-child {
+                    @include for-small-size-landscape-only {
+                        grid-row: 1;
+                        grid-column: 3;
+                    }
+                }
             }
         }
     }
@@ -212,7 +225,7 @@ a, a:link, a:visited, a:hover, a:active {
             font-size: calc(8px + 0.5vmax);
             line-height: calc(8px + 0.6vmax);
 
-            @include ffor-small-size-landscape-only {
+            @include for-small-size-landscape-only {
                 font-size: calc(8px + 0.9vmax);
                 line-height: calc(8px + 1.1vmax);
             }

@@ -368,6 +368,11 @@ a, a:link, a:visited, a:hover, a:active {
   @media (max-width: 749px) and (orientation: portrait) {
     #left #skills .aside-sublists {
       grid-template-columns: unset; } }
+  @media (max-width: 749px) and (orientation: landscape) {
+    #left #skills .aside-sublists {
+      grid-column-gap: 3vmax;
+      grid-row-gap: 0;
+      grid-template-columns: max-content max-content 1fr; } }
   @media (min-width: 750px) and (max-width: 899px) {
     #left #skills .aside-sublists {
       grid-template-columns: unset; } }
@@ -376,6 +381,10 @@ a, a:link, a:visited, a:hover, a:active {
     grid-template-columns: 1fr;
     grid-template-rows: min-content 1fr;
     grid-gap: 5%; }
+    @media (max-width: 749px) and (orientation: landscape) {
+      #left #skills .aside-sublists .aside-sublist:last-child {
+        grid-row: 1;
+        grid-column: 3; } }
 
 #right .project {
   display: grid;
@@ -463,36 +472,26 @@ a, a:link, a:visited, a:hover, a:active {
   font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: 800;
   font-size: calc(14px + 0.6vmax); }
-  @media (max-width: 749px) {
+  @media (max-width: 749px) and (orientation: landscape) {
     #right .project .project-title {
       font-size: calc(14px + 1vmax); } }
-  @media (max-width: 749px) and (orientation: portrait) {
-    #right .project .project-title {
-      font-size: calc(14px + 0.6vmax); } }
 
 #right .project .project-description {
   font-family: "Montserrat", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: calc(8px + 0.5vmax);
   line-height: calc(8px + 0.6vmax); }
-  @media (max-width: 749px) {
+  @media (max-width: 749px) and (orientation: landscape) {
     #right .project .project-description {
       font-size: calc(8px + 0.9vmax);
       line-height: calc(8px + 1.1vmax); } }
-  @media (max-width: 749px) and (orientation: portrait) {
-    #right .project .project-description {
-      font-size: calc(8px + 0.5vmax);
-      line-height: calc(8px + 0.6vmax); } }
 
 #right .project .project-story {
   font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: calc(8px + 0.7vmax); }
-  @media (max-width: 749px) {
+  @media (max-width: 749px) and (orientation: landscape) {
     #right .project .project-story {
       font-size: calc(8px + 1.2vmax); } }
-  @media (max-width: 749px) and (orientation: portrait) {
-    #right .project .project-story {
-      font-size: calc(8px + 0.7vmax); } }
 
 #grid {
   max-height: 100vh;

@@ -57,6 +57,10 @@ a, a:link, a:visited, a:hover, a:active {
             grid-template-columns: max-content max-content;
             grid-template-rows: min-content min-content;
 
+            @include for-small-size-portrait-only {
+                grid-template-columns: unset;
+            }
+
             @include for-medium-size {
                 grid-template-columns: unset;
             }

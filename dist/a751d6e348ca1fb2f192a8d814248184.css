@@ -365,6 +365,9 @@ a, a:link, a:visited, a:hover, a:active {
   grid-gap: 3vmax;
   grid-template-columns: max-content max-content;
   grid-template-rows: min-content min-content; }
+  @media (max-width: 749px) and (orientation: portrait) {
+    #left #skills .aside-sublists {
+      grid-template-columns: unset; } }
   @media (min-width: 750px) and (max-width: 899px) {
     #left #skills .aside-sublists {
       grid-template-columns: unset; } }

@@ -41,7 +41,7 @@ a, a:link, a:visited, a:hover, a:active {
             display: grid;
             grid-template-columns: max-content max-content;
             grid-template-rows: 1fr 1fr 1fr;
-            grid-column-gap: $bezelWidth;
+            grid-column-gap: $spaceUnit;
             grid-row-gap: 5vmax;
 
             @include for-medium-size {
@@ -76,13 +76,13 @@ a, a:link, a:visited, a:hover, a:active {
         display: grid;
         grid-auto-columns: min-content 1fr;
         grid-auto-flow: column;
-        grid-gap: $bezelWidth;
+        grid-gap: $spaceUnit;
 
         @include for-small-size-portrait-only {
             grid-auto-columns: unset;
             grid-template-rows: 1fr min-content;
             grid-auto-flow: row;
-            grid-gap: 0;
+            grid-gap: 1rem;
         }
     }
 }
@@ -218,7 +218,6 @@ a, a:link, a:visited, a:hover, a:active {
     max-height: 100vh;
     position: fixed;
     overflow: hidden;
-    padding: $bezelWidth;
 
     @include for-small-size {
         max-height: unset;
@@ -239,23 +238,18 @@ a, a:link, a:visited, a:hover, a:active {
 }
 
 #left {
-    margin-right: #{$bezelWidth / 2};
+    margin-right: #{$spaceUnit / 2};
+    padding-left: $spaceUnit;
 
     @include for-small-size {
         margin-right: 0;
+        padding-right: $spaceUnit;
     }
 
     header {
         @include centerChildren;
 
-        margin-top: -$bezelWidth; // Substract the bezel
-        margin-left: -$bezelWidth; // Substract the bezel
-
         @include for-small-size {
-            margin-left: 0;
-        }
-
-        @include for-small-size-portrait-only {
             margin-top: 0;
             margin-left: 0;
         }
@@ -314,21 +308,15 @@ a, a:link, a:visited, a:hover, a:active {
     }
 
     aside {
-        padding-left: $bezelWidth;
-
-        @include for-small-size-portrait-only {
-            padding-left: 0;
-        }
-
         .aside-title {
             position: relative;
-            top: $bezelWidth;
+            top: $spaceUnit;
         }
 
         .aside-content {
             @include centerChildrenVertically;
 
-            height: calc(100vh - #{$bezelWidth});
+            height: 100vh;
         }
 
         &#competencies {
@@ -357,10 +345,12 @@ a, a:link, a:visited, a:hover, a:active {
 }
 
 #right {
-    margin-left: #{$bezelWidth / 2};
+    margin-left: #{$spaceUnit / 2};
+    padding-right: $spaceUnit;
 
     @include for-small-size {
         margin-left: 0;
+        padding-left: $spaceUnit;
     }
 
     .project {
@@ -368,28 +358,17 @@ a, a:link, a:visited, a:hover, a:active {
 
         justify-items: center;
         align-items: center;
-        padding-right: $bezelWidth;
+
+        @include for-small-size {
+            padding-right: 0;
+        }
 
         @include for-small-size-portrait-only {
-            padding-right: 0;
-            padding-bottom: $bezelWidth;
-        }
-
-        &:first-child {
-            margin-top: -$bezelWidth; // Substract the bezel
-        }
-
-        &:last-child {
-            margin-bottom: $bezelWidth; // Substract the bezel
-
-            @include for-small-size-portrait-only {
-                margin-bottom: 0;
-                padding-bottom: 0;
-            }
+            padding-bottom: $spaceUnit;
         }
 
         .project-image {
-            max-height: calc(100vh - #{$bezelWidth * 2});
+            max-height: calc(100vh - #{$spaceUnit * 2});
             max-width: 18vmax;
 
             @include for-small-size-portrait-only {

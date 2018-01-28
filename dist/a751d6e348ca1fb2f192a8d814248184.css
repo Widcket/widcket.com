@@ -384,7 +384,7 @@ a, a:link, a:visited, a:hover, a:active {
       grid-auto-columns: unset;
       grid-template-rows: 1fr min-content;
       grid-auto-flow: row;
-      grid-gap: 0; } }
+      grid-gap: 1rem; } }
 
 #left header #presentation #greeting {
   font-family: "Nothing You Could Do", Georgia, Times, serif;
@@ -474,8 +474,7 @@ a, a:link, a:visited, a:hover, a:active {
 #grid {
   max-height: 100vh;
   position: fixed;
-  overflow: hidden;
-  padding: 2rem; }
+  overflow: hidden; }
   @media (max-width: 749px) {
     #grid {
       max-height: unset;
@@ -492,21 +491,18 @@ a, a:link, a:visited, a:hover, a:active {
       overflow: auto; } }
 
 #left {
-  margin-right: 1rem; }
+  margin-right: 1rem;
+  padding-left: 2rem; }
   @media (max-width: 749px) {
     #left {
-      margin-right: 0; } }
+      margin-right: 0;
+      padding-right: 2rem; } }
   #left header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin-top: -2rem;
-    margin-left: -2rem; }
+    align-items: center; }
     @media (max-width: 749px) {
-      #left header {
-        margin-left: 0; } }
-    @media (max-width: 749px) and (orientation: portrait) {
       #left header {
         margin-top: 0;
         margin-left: 0; } }
@@ -544,55 +540,45 @@ a, a:link, a:visited, a:hover, a:active {
           margin-left: 0; } }
     #left header #profiles a:first-child {
       margin-left: 0; }
-  #left aside {
-    padding-left: 2rem; }
-    @media (max-width: 749px) and (orientation: portrait) {
-      #left aside {
-        padding-left: 0; } }
-    #left aside .aside-title {
-      position: relative;
-      top: 2rem; }
-    #left aside .aside-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      height: calc(100vh - 2rem); }
-    #left aside#competencies .aside-list {
-      margin-top: 0; }
-    #left aside .aside-list, #left aside .aside-sublists {
-      margin-top: 4%; }
-    #left aside .aside-sublists {
-      margin-top: 0; }
-      #left aside .aside-sublists .aside-pills {
-        display: inline;
-        margin-left: 0.3rem; }
+  #left aside .aside-title {
+    position: relative;
+    top: 2rem; }
+  #left aside .aside-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh; }
+  #left aside#competencies .aside-list {
+    margin-top: 0; }
+  #left aside .aside-list, #left aside .aside-sublists {
+    margin-top: 4%; }
+  #left aside .aside-sublists {
+    margin-top: 0; }
+    #left aside .aside-sublists .aside-pills {
+      display: inline;
+      margin-left: 0.3rem; }
   #left header, #left aside {
     overflow: hidden;
     height: 100vh; }
 
 #right {
-  margin-left: 1rem; }
+  margin-left: 1rem;
+  padding-right: 2rem; }
   @media (max-width: 749px) {
     #right {
-      margin-left: 0; } }
+      margin-left: 0;
+      padding-left: 2rem; } }
   #right .project {
     overflow: hidden;
     height: 100vh;
     justify-items: center;
-    align-items: center;
-    padding-right: 2rem; }
+    align-items: center; }
+    @media (max-width: 749px) {
+      #right .project {
+        padding-right: 0; } }
     @media (max-width: 749px) and (orientation: portrait) {
       #right .project {
-        padding-right: 0;
         padding-bottom: 2rem; } }
-    #right .project:first-child {
-      margin-top: -2rem; }
-    #right .project:last-child {
-      margin-bottom: 2rem; }
-      @media (max-width: 749px) and (orientation: portrait) {
-        #right .project:last-child {
-          margin-bottom: 0;
-          padding-bottom: 0; } }
     #right .project .project-image {
       max-height: calc(100vh - 4rem);
       max-width: 18vmax; }

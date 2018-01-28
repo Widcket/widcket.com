@@ -584,7 +584,7 @@ a, a:link, a:visited, a:hover, a:active {
       max-width: 18vmax; }
       @media (max-width: 749px) and (orientation: portrait) {
         #right .project .project-image {
-          max-width: 33vh; } }
+          max-width: calc(34vh - 2rem); } }
     #right .project .project-description {
       margin-top: 0.7rem; }
     #right .project .project-story {

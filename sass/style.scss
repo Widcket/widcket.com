@@ -372,7 +372,7 @@ a, a:link, a:visited, a:hover, a:active {
             max-width: 18vmax;
 
             @include for-small-size-portrait-only {
-                max-width: 33vh;
+                max-width: calc(34vh - 2rem);
             }
         }
 

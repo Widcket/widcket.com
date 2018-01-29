@@ -150,7 +150,7 @@ module.exports = reloadCSS;
 require('../node_modules/ress/ress.css');
 
 require('../sass/style.scss');
-},{"../node_modules/ress/ress.css":6,"../sass/style.scss":5}],18:[function(require,module,exports) {
+},{"../node_modules/ress/ress.css":6,"../sass/style.scss":5}],10:[function(require,module,exports) {
 
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
@@ -170,7 +170,7 @@ module.bundle.Module = Module;
 
 if (!module.bundle.parent && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
-  var ws = new WebSocket('ws://' + hostname + ':' + '60296' + '/');
+  var ws = new WebSocket('ws://' + hostname + ':' + '64215' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -271,5 +271,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id);
   });
 }
-},{}]},{},[18,4])
+},{}]},{},[10,4])
 //# sourceMappingURL=/dist/a751d6e348ca1fb2f192a8d814248184.map

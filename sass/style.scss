@@ -307,6 +307,8 @@ a, a:link, a:visited, a:hover, a:active {
 }
 
 #left {
+    position: relative;
+
     & > * {
         @include leftSlideMargins;
 
@@ -317,6 +319,11 @@ a, a:link, a:visited, a:hover, a:active {
         @include centerChildren;
 
         padding-right: $spaceUnit / 2;
+
+        & > * {
+            position: relative;
+            z-index: 10;
+        }
 
         @include for-small-size {
             margin-top: 0;
@@ -474,7 +481,7 @@ a, a:link, a:visited, a:hover, a:active {
 #left {
     header {
         background-image: url('../img/bg.png');
-        background-size: cover;
+        /* background-size: cover; */
         background-position: center;
         background-blend-mode: luminosity;
         background-color: #6ad5ff;
@@ -482,6 +489,18 @@ a, a:link, a:visited, a:hover, a:active {
         color: white;
         /* background-color: #FFD464; */
         /* background-color: #a36aff; */
+
+        &:before  {
+            content: ' ';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50vw;
+            height: 100%;
+            opacity: 0.1;
+            background-color: black;
+        }
 
         #presentation {
             #name {

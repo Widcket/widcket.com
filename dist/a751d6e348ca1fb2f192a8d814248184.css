@@ -543,95 +543,93 @@ a, a:link, a:visited, a:hover, a:active {
       margin: 0;
       overflow: auto; } }
 
-#left > * {
-  margin-right: 1rem;
-  padding-left: 2rem;
-  width: 100%; }
-  @media (max-width: 749px) {
-    #left > * {
-      margin-right: 0;
-      padding-right: 2rem; } }
-  @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
-    #left > * {
-      margin-right: 0;
-      padding-right: 2rem; } }
-
-#left header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-right: 1rem; }
-  @media (max-width: 749px) {
-    #left header {
-      margin-top: 0;
-      margin-left: 0;
-      padding-right: 2rem; } }
-  @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
-    #left header {
-      margin-top: 0;
-      margin-left: 0;
-      padding-right: 2rem; } }
-  #left header #presentation {
-    margin-top: -2.6vmax; }
-    #left header #presentation #greeting {
+#left {
+  position: relative; }
+  #left > * {
+    margin-right: 1rem;
+    padding-left: 2rem;
+    width: 100%; }
+    @media (max-width: 749px) {
+      #left > * {
+        margin-right: 0;
+        padding-right: 2rem; } }
+    @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
+      #left > * {
+        margin-right: 0;
+        padding-right: 2rem; } }
+  #left header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 1rem; }
+    #left header > * {
       position: relative;
-      top: 2.6vmax;
-      left: -2vmax; }
+      z-index: 10; }
+    @media (max-width: 749px) {
+      #left header {
+        margin-top: 0;
+        margin-left: 0;
+        padding-right: 2rem; } }
+    @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
+      #left header {
+        margin-top: 0;
+        margin-left: 0;
+        padding-right: 2rem; } }
+    #left header #presentation {
+      margin-top: -2.6vmax; }
+      #left header #presentation #greeting {
+        position: relative;
+        top: 2.6vmax;
+        left: -2vmax; }
+        @media (max-width: 749px) {
+          #left header #presentation #greeting {
+            top: 3.7vmax; } }
+        @media (min-width: 750px) and (max-width: 899px) and (orientation: landscape) {
+          #left header #presentation #greeting {
+            top: 2.3vmax;
+            left: -1.5vmax; } }
+    #left header #tagline {
+      margin: -0.5vmax 0 2vmax 0; }
       @media (max-width: 749px) {
-        #left header #presentation #greeting {
-          top: 3.7vmax; } }
+        #left header #tagline {
+          margin: -0.7vmax 0 2.7vmax 0; } }
       @media (min-width: 750px) and (max-width: 899px) and (orientation: landscape) {
-        #left header #presentation #greeting {
-          top: 2.3vmax;
-          left: -1.5vmax; } }
-  #left header #tagline {
-    margin: -0.5vmax 0 2vmax 0; }
-    @media (max-width: 749px) {
-      #left header #tagline {
-        margin: -0.7vmax 0 2.7vmax 0; } }
-    @media (min-width: 750px) and (max-width: 899px) and (orientation: landscape) {
-      #left header #tagline {
-        margin: -0.3vmax 0 1.6vmax 0; } }
-  #left header #profiles a {
-    display: inline-block;
-    margin-left: 1vmax;
-    padding: 0.5vmax 2vmax;
-    border-radius: 9vmax; }
-    @media (max-width: 749px) {
-      #left header #profiles a {
-        padding: 0.8vmax 3vmax; } }
-    @media (min-width: 750px) and (max-width: 899px) and (orientation: landscape) {
-      #left header #profiles a {
-        margin-left: 0; } }
-  #left header #profiles a:first-child {
-    margin-left: 0; }
-
-#left aside .aside-title {
-  position: relative;
-  top: 2rem; }
-
-#left aside .aside-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100vh; }
-
-#left aside#competencies .aside-list {
-  margin-top: 0; }
-
-#left aside .aside-list, #left aside .aside-sublists {
-  margin-top: 4%; }
-
-#left aside .aside-sublists {
-  margin-top: 0; }
-  #left aside .aside-sublists .aside-pills {
-    display: inline;
-    margin-left: 0.3rem; }
-
-#left header, #left aside {
-  overflow: hidden;
-  height: 100vh; }
+        #left header #tagline {
+          margin: -0.3vmax 0 1.6vmax 0; } }
+    #left header #profiles a {
+      display: inline-block;
+      margin-left: 1vmax;
+      padding: 0.5vmax 2vmax;
+      border-radius: 9vmax; }
+      @media (max-width: 749px) {
+        #left header #profiles a {
+          padding: 0.8vmax 3vmax; } }
+      @media (min-width: 750px) and (max-width: 899px) and (orientation: landscape) {
+        #left header #profiles a {
+          margin-left: 0; } }
+    #left header #profiles a:first-child {
+      margin-left: 0; }
+  #left aside .aside-title {
+    position: relative;
+    top: 2rem; }
+  #left aside .aside-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh; }
+  #left aside#competencies .aside-list {
+    margin-top: 0; }
+  #left aside .aside-list, #left aside .aside-sublists {
+    margin-top: 4%; }
+  #left aside .aside-sublists {
+    margin-top: 0; }
+    #left aside .aside-sublists .aside-pills {
+      display: inline;
+      margin-left: 0.3rem; }
+  #left header, #left aside {
+    overflow: hidden;
+    height: 100vh; }
 
 #right .project {
   margin-left: 1rem;
@@ -678,7 +676,7 @@ a, a:link, a:visited, a:hover, a:active {
 
 #left header {
   background-image: url("056c490c6620db834aa956e6ed323837.png");
-  background-size: cover;
+  /* background-size: cover; */
   background-position: center;
   background-blend-mode: luminosity;
   background-color: #6ad5ff;
@@ -686,6 +684,16 @@ a, a:link, a:visited, a:hover, a:active {
   color: white;
   /* background-color: #FFD464; */
   /* background-color: #a36aff; */ }
+  #left header:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50vw;
+    height: 100%;
+    opacity: 0.1;
+    background-color: black; }
   #left header #presentation #name {
     opacity: 0.7; }
   #left header #profiles a {

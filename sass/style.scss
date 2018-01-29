@@ -485,36 +485,25 @@ a, a:link, a:visited, a:hover, a:active {
 
 // Lines & colors
 
+main {
+    color: #222;
+}
+
 #left {
     header {
         background-image: url('../img/bg.png');
         /* background-size: cover; */
         background-position: top;
-        background-blend-mode: luminosity;
+        background-blend-mode: overlay;
         background-color: #6ad5ff;
         /* background-color: #FF6B6B; */
-        color: white;
         /* background-color: #FFD464; */
         /* background-color: #a36aff; */
 
-        &:before  {
-            @include dark-overlay(0.15);
-
-            @include for-small-size {
-                border: 1rem solid white;
-            }
-        }
-
-        #presentation {
-            #name {
-                opacity: 0.9;
-            }
-        }
-
         #profiles {
             a {
-                color: white;
-                border: 1px solid white;
+                color: #111;
+                border: 1px solid #111;
             }
         }
     }

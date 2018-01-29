@@ -474,13 +474,14 @@ a, a:link, a:visited, a:hover, a:active {
 #left {
     header {
         background-image: url('../img/bg.png');
-        background-position: center;
-        background-color: #69D2E7;
-        background-blend-mode: luminosity;
         background-size: cover;
+        background-position: center;
+        background-blend-mode: luminosity;
+        background-color: #6ad5ff;
         /* background-color: #FF6B6B; */
         color: white;
         /* background-color: #FFD464; */
+        /* background-color: #a36aff; */
 
         #presentation {
             #name {

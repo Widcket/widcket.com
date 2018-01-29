@@ -684,13 +684,9 @@ main {
 
 #left header {
   background-image: url("056c490c6620db834aa956e6ed323837.png");
-  /* background-size: cover; */
   background-position: top;
   background-blend-mode: overlay;
-  background-color: #6ad5ff;
-  /* background-color: #FF6B6B; */
-  /* background-color: #FFD464; */
-  /* background-color: #a36aff; */ }
+  background-color: #6bdafb; }
   #left header #profiles a {
     color: #111;
     border: 1px solid #111; }

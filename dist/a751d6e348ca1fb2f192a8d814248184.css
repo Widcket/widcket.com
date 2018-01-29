@@ -682,7 +682,7 @@ a, a:link, a:visited, a:hover, a:active {
 #left header {
   background-image: url("056c490c6620db834aa956e6ed323837.png");
   /* background-size: cover; */
-  background-position: center;
+  background-position: top;
   background-blend-mode: luminosity;
   background-color: #6ad5ff;
   /* background-color: #FF6B6B; */

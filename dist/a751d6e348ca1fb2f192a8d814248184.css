@@ -690,7 +690,7 @@ a, a:link, a:visited, a:hover, a:active {
     position: absolute;
     left: 0;
     top: 0;
-    width: 50vw;
+    width: 100%;
     height: 100%;
     opacity: 0.1;
     background-color: black; }

@@ -664,10 +664,10 @@ a, a:link, a:visited, a:hover, a:active {
         max-width: 35vh; } }
     @media (min-width: 750px) and (max-width: 899px) and (orientation: portrait) {
       #right .project .project-image {
-        max-width: calc(34vh - 2rem); } }
+        max-width: 32vh; } }
     @media (min-width: 750px) and (max-width: 899px) and (orientation: landscape) {
       #right .project .project-image {
-        max-width: calc(38vh - 2rem); } }
+        max-width: 33vh; } }
   #right .project .project-description {
     margin-top: 0.7rem; }
   #right .project .project-story {
@@ -708,6 +708,10 @@ a, a:link, a:visited, a:hover, a:active {
   #left header #profiles a {
     color: white;
     border: 1px solid white; }
+
+#left aside:last-child {
+  background-size: unset;
+  background-position: top; }
 
 #left aside .aside-list-item {
   list-style-type: none; }

@@ -457,11 +457,11 @@ a, a:link, a:visited, a:hover, a:active {
             }
 
             @include for-medium-size-portrait-only {
-                max-width: calc(34vh - 2rem);
+                max-width: 32vh;
             }
 
             @include for-medium-size-landscape-only {
-                max-width: calc(38vh - 2rem);
+                max-width: 33vh;
             }
         }
 
@@ -521,6 +521,11 @@ a, a:link, a:visited, a:hover, a:active {
     }
 
     aside {
+        &:last-child {
+            background-size: unset;
+            background-position: top;
+        }
+
         .aside-list-item {
             list-style-type: none;
         }

@@ -9,6 +9,7 @@
 // - Add backgrounds
 // - Add parallax details and other scroll animations
 // - Add microinteractions
+// - Optmize
 
 // Custom resets
 
@@ -308,6 +309,8 @@ a, a:link, a:visited, a:hover, a:active {
 #left {
     & > * {
         @include leftSlideMargins;
+
+        width: 100%;
     }
 
     header {
@@ -422,6 +425,7 @@ a, a:link, a:visited, a:hover, a:active {
         @include rightSlideMargins;
         @include coverHeight;
 
+        width: 100%;
         justify-items: center;
         align-items: center;
 

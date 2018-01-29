@@ -455,6 +455,10 @@ a, a:link, a:visited, a:hover, a:active {
             @include for-medium-size-portrait-only {
                 max-width: calc(34vh - 2rem);
             }
+
+            @include for-medium-size-landscape-only {
+                max-width: calc(60vh - 2rem);
+            }
         }
 
         .project-description {

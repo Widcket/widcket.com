@@ -452,12 +452,16 @@ a, a:link, a:visited, a:hover, a:active {
                 max-width: calc(34vh - 2rem);
             }
 
+            @include for-small-size-landscape-only {
+                max-width: 35vh;
+            }
+
             @include for-medium-size-portrait-only {
                 max-width: calc(34vh - 2rem);
             }
 
             @include for-medium-size-landscape-only {
-                max-width: calc(60vh - 2rem);
+                max-width: calc(38vh - 2rem);
             }
         }
 

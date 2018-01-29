@@ -491,6 +491,7 @@ main {
 
 #left {
     header {
+        color: #0D1F22;
         background-image: url('../img/bg.png');
         background-position: top;
         background-blend-mode: overlay;
@@ -498,8 +499,8 @@ main {
 
         #profiles {
             a {
-                color: #111;
-                border: 1px solid #111;
+                color: #0D1F22;
+                border: 1px solid #0D1F22;
             }
         }
     }

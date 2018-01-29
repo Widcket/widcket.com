@@ -683,13 +683,14 @@ main {
   color: #222; }
 
 #left header {
+  color: #0D1F22;
   background-image: url("056c490c6620db834aa956e6ed323837.png");
   background-position: top;
   background-blend-mode: overlay;
   background-color: #6bdafb; }
   #left header #profiles a {
-    color: #111;
-    border: 1px solid #111; }
+    color: #0D1F22;
+    border: 1px solid #0D1F22; }
 
 #left aside:last-child {
   background-size: unset;

@@ -676,8 +676,20 @@ a, a:link, a:visited, a:hover, a:active {
 #tagline, .aside-title, .aside-subtitle, .project-title {
   display: block; }
 
-#left header #profiles a {
-  border: 1px solid black; }
+#left header {
+  background-image: url("056c490c6620db834aa956e6ed323837.png");
+  background-position: center;
+  background-color: #69D2E7;
+  background-blend-mode: luminosity;
+  background-size: cover;
+  /* background-color: #FF6B6B; */
+  color: white;
+  /* background-color: #FFD464; */ }
+  #left header #presentation #name {
+    opacity: 0.75; }
+  #left header #profiles a {
+    color: white;
+    border: 1px solid white; }
 
 #left aside .aside-list-item {
   list-style-type: none; }

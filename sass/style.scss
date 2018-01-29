@@ -473,9 +473,25 @@ a, a:link, a:visited, a:hover, a:active {
 
 #left {
     header {
+        background-image: url('../img/bg.png');
+        background-position: center;
+        background-color: #69D2E7;
+        background-blend-mode: luminosity;
+        background-size: cover;
+        /* background-color: #FF6B6B; */
+        color: white;
+        /* background-color: #FFD464; */
+
+        #presentation {
+            #name {
+                opacity: 0.75;
+            }
+        }
+
         #profiles {
             a {
-                border: 1px solid $secondaryColor;
+                color: white;
+                border: 1px solid white;
             }
         }
     }

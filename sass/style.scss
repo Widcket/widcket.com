@@ -492,6 +492,10 @@ a, a:link, a:visited, a:hover, a:active {
 
         &:before  {
             @include dark-overlay(0.15);
+
+            @include for-small-size {
+                border: 1rem solid white;
+            }
         }
 
         #presentation {

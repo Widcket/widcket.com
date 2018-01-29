@@ -694,6 +694,9 @@ a, a:link, a:visited, a:hover, a:active {
     height: 100vh;
     opacity: 0.15;
     background-color: black; }
+    @media (max-width: 749px) {
+      #left header:before {
+        border: 1rem solid white; } }
   #left header #presentation #name {
     opacity: 0.9; }
   #left header #profiles a {

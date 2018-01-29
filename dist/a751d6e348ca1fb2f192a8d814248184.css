@@ -686,7 +686,7 @@ main {
   color: #0D1F22;
   background-image: url("056c490c6620db834aa956e6ed323837.png");
   background-position: top;
-  background-blend-mode: overlay;
+  background-blend-mode: soft-light;
   background-color: #6bdafb; }
   #left header #profiles a {
     color: #0D1F22;

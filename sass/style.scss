@@ -491,15 +491,7 @@ a, a:link, a:visited, a:hover, a:active {
         /* background-color: #a36aff; */
 
         &:before  {
-            content: ' ';
-            display: block;
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.1;
-            background-color: black;
+            @include dark-overlay(0.15);
         }
 
         #presentation {

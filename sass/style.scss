@@ -329,7 +329,7 @@ a, a:link, a:visited, a:hover, a:active {
         }
 
         #tagline {
-            margin: -0.5vmax 0 2vmax 0;
+            margin: -0.6vmax 0 2vmax 0;
 
             @include for-small-size {
                 margin: -0.7vmax 0 2.7vmax 0;
@@ -463,7 +463,7 @@ main {
 
 #left {
     header {
-        color: #2a0744;
+        color: #071244;
         background-image: url('../img/bg.png');
         background-position: top;
         background-blend-mode: overlay;
@@ -475,8 +475,8 @@ main {
 
         #profiles {
             a {
-                color: #2a0744;
-                border: 1px solid #2a0744;
+                color: #071244;
+                border: 1px solid #071244;
             }
         }
     }

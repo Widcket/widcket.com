@@ -569,7 +569,7 @@ a, a:link, a:visited, a:hover, a:active {
     #left header #presentation {
       margin-top: -2.6vmax; }
     #left header #tagline {
-      margin: -0.5vmax 0 2vmax 0; }
+      margin: -0.6vmax 0 2vmax 0; }
       @media (max-width: 749px) {
         #left header #tagline {
           margin: -0.7vmax 0 2.7vmax 0; } }
@@ -662,7 +662,7 @@ main {
   color: #222; }
 
 #left header {
-  color: #2a0744;
+  color: #071244;
   background-image: url("056c490c6620db834aa956e6ed323837.png");
   background-position: top;
   background-blend-mode: overlay;
@@ -677,8 +677,8 @@ main {
     opacity: 0.6;
     background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%); }
   #left header #profiles a {
-    color: #2a0744;
-    border: 1px solid #2a0744; }
+    color: #071244;
+    border: 1px solid #071244; }
 
 #left aside:last-child {
   background-size: unset;

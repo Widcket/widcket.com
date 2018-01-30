@@ -491,16 +491,20 @@ main {
 
 #left {
     header {
-        color: #0D1F22;
+        color: #2a0744;
         background-image: url('../img/bg.png');
         background-position: top;
-        background-blend-mode: soft-light;
+        background-blend-mode: overlay;
         background-color: #6bdafb;
+
+        &:before {
+            @include overlay(0.6, linear-gradient( 135deg, #81FFEF 10%, #F067B4 100%))
+        }
 
         #profiles {
             a {
-                color: #0D1F22;
-                border: 1px solid #0D1F22;
+                color: #2a0744;
+                border: 1px solid #2a0744;
             }
         }
     }

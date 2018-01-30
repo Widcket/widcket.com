@@ -470,7 +470,11 @@ main {
         background-color: #6bdafb;
 
         &:before {
-            @include overlay(0.6, linear-gradient(to top, #fff1eb 0%, #ace0f9 100%));
+            @include overlay(0.6, linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%));
+        }
+
+        & > * {
+            opacity: 0.9;
         }
 
         #profiles {
